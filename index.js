@@ -12,7 +12,7 @@
 },
 {
 	"filename":"https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/ScriptFrameworkTester.js",
-	"includes":["https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/SubScriptExample.js"],
+	"includes":["https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/lib/game-object-wrapper.js"],
 	"title":"Quick Test Script", 
 	"description":"Test for sub scripts.", 
 	"author":"Theta",
