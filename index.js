@@ -9,6 +9,15 @@
 	"author":"Theta",
 	"version":"1.0",
 	"thumbnail":"https://www.theta.co.nz/images/thetaLogo_sm.png"
+},
+{
+	"filename":"https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/ScriptFrameworkTester.js",
+	"includes":["https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/SubScriptExample.js"],
+	"title":"Quick Test Script", 
+	"description":"Test for sub scripts.", 
+	"author":"Theta",
+	"version":"1.0",
+	"thumbnail":"https://www.theta.co.nz/images/thetaLogo_sm.png"
 }
 ]
 }
