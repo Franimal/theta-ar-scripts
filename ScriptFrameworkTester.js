@@ -28,8 +28,8 @@ function start(){
 	setState(ob, 'moveKey', 'a')();
 	setState(ob, 'colourKey', 'a')();
 	
-	applybehaviours(ob, colourBehaviours);
-	applybehaviours(ob, moveBehaviours);
+	applyBehaviours(ob, colourBehaviours);
+	applyBehaviours(ob, moveBehaviours);
 }
 
 function update(){
