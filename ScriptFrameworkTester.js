@@ -14,7 +14,7 @@ function start(){
 
 	var colourBehaviours = [
 		transitionColour("a", 255, 0, 0, 1, setState("colourKey", "b")), 
-		transitionColour("b" 255, 0, 255, 1, setState("colourKey", "c")), 
+		transitionColour("b", 255, 0, 255, 1, setState("colourKey", "c")), 
 		transitionColour("c", 0, 255, 255, 1, setState("colourKey", "a"))
 	];
 	
