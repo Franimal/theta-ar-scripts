@@ -13,9 +13,9 @@ function start(){
 	];
 
 	var colourBehaviours = [
-		transitionColour("a", 255, 0, 0, 255, 2), 
-		transitionColour(0, 255, 0, 255, 2), 
-		transitionColour(0, 0, 255, 255, 2)
+		transitionColour("a", 255, 0, 0, 1, setState("colourKey", "b")), 
+		transitionColour("b" 255, 0, 255, 1, setState("colourKey", "c")), 
+		transitionColour("c", 0, 255, 255, 1, setState("colourKey", "a"))
 	];
 	
 	setState(ob, 'moveKey', 'a');
@@ -23,10 +23,6 @@ function start(){
 	
 	applybehaviours(ob, colourBehaviours);
 	applybehaviours(ob, moveBehaviours);
-
-
-var allBehavious = [move(1, 1, 1, 1), move(1, 2, 1, 1), move(1, 1, 2, 1), colour(255, 0, 0, 255, 2), colour(0, 255, 0, 255, 2), colour(0, 0, 255, 255, 2)];
-
 }
 
 function update(){
