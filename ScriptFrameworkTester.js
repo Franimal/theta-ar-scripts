@@ -25,9 +25,9 @@ function start(){
 			transitionColour("c", 0, 255, 255, 1, setState(ob, "colourKey", "a"))
 		];
 		log("3");
-	setState(ob, 'moveKey', 'a')();
+	setState(ob, "moveKey", "a");
 		log("4");
-	setState(ob, 'colourKey', 'a')();
+	setState(ob, "colourKey", "a");
 		log("5");
 	applyBehaviours(ob, colourBehaviours);
 	log("6");
