@@ -1,8 +1,8 @@
 {
 	"IOS": [
 	  {
-		"filename": "https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/ios-features.js",
-		"includes": [ "https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/lib/game-object-wrapper.js" ],
+		"filename": "https://raw.githubusercontent.com/Franimal/theta-ar-scripts/develop/ios-features.js",
+		"includes": [ "https://raw.githubusercontent.com/Franimal/theta-ar-scripts/develop/lib/game-object-wrapper.js" ],
 		"title": "iOS Features",
 		"description": "Script for testing iOS features",
 		"author": "Theta",
