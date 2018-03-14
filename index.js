@@ -21,7 +21,7 @@
 },
 {
 	"filename":"C:/Projects/theta-ar-scripts/ScriptFrameworkTester.js",
-	"includes":["C:/Projects/theta-ar-scripts/game-object-wrapper.js"],
+	"includes":["C:/Projects/theta-ar-scripts/lib/game-object-wrapper.js"],
 	"title":"Quick Test Script LOCAL ONLY", 
 	"description":"Test for sub scripts.", 
 	"author":"Theta",

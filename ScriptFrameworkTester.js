@@ -14,7 +14,7 @@ function setKey(keyName, keyValue) {
 
 function start(){	
 	var obj = createCube("Left", new Vector3(-0.5, 0, 2), new Vector3(0, 0, 0), new Vector3(0.4, 0.4, 0.4));
-	var sphere = createSphere("Left", new Vector3(-0.5, 0, 2), new Vector3(0, 0, 0), new Vector3(0.4, 0.4, 0.4));
+	var sphere = createSphere("Sphere", new Vector3(-0.5, 0, 2), new Vector3(0, 0, 0), new Vector3(0.4, 0.4, 0.4));
 	
 	setState(obj, function (currentState) {
 		return {
@@ -23,8 +23,8 @@ function start(){
 			testKey: 'a'
 		};
 	});
-
-	setState(sphere, function (currentState){
+	
+	setState(sphere, function (currentState) {
 		return {
 			orbitKey: 'a'
 		};
@@ -47,7 +47,7 @@ function start(){
 	];
 
 	var orbitInstructions = [
-		orbit("a", 2, 1, setKey("orbitKey`", "a"));
+		orbit("a", 2, 1, setKey("orbitKey`", "a"))
 	];
 	
 	 addInstructions(obj, colorInstructions);
