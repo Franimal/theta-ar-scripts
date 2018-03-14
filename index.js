@@ -19,5 +19,14 @@
 	"version":"1.0",
 	"thumbnail":"https://www.theta.co.nz/images/thetaLogo_sm.png"
 }
+{
+	"filename":"C:/Projects/theta-ar-scripts/ScriptFrameworkTester.js",
+	"includes":["C:/Projects/theta-ar-scripts/game-object-wrapper.js"],
+	"title":"Quick Test Script LOCAL ONLY", 
+	"description":"Test for sub scripts.", 
+	"author":"Theta",
+	"version":"1.0",
+	"thumbnail":"https://www.theta.co.nz/images/thetaLogo_sm.png"
+}
 ]
 }
