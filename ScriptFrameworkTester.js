@@ -24,13 +24,21 @@ function start(){
 			transitionColour("b", 255, 0, 255, 1, setState(ob, "colourKey", "c")), 
 			transitionColour("c", 0, 255, 255, 1, setState(ob, "colourKey", "a"))
 		];
+		
+		var testInstructions = [
+			instructionTest();
+		];
 	setState(ob, "moveKey", "a");
 
 	setState(ob, "colourKey", "a");
 
-	addInstructions(ob, colourInstructions);
+	//addInstructions(ob, colourInstructions);
 
-	addInstructions(ob, moveInstructions);
+	//addInstructions(ob, moveInstructions);
+	
+	addInstructions(ob, testInstructions);
+	
+
 }
 
 function update(){
