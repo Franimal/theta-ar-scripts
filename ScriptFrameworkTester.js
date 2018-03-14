@@ -39,22 +39,17 @@ function start(){
 	var colorInstructions = [
 		transitionColor("a", 1, 0, 0, 1, 1, setKey("colorKey", "b")), 
 		transitionColor("b", 0, 1, 0, 1, 1, setKey("colorKey", "c")), 
-		transitionColor("c", 0, 0, 1, 1, 1, setKey("colorKey", "a"))
-	];
-	
-	var testInstructions = [
-		instructionTest("a", 1, 1, 1, 1, setKey("testKey", "b"))
+		transitionColor("c", 0, 0, 1, 1, 1, setKey("colorKey", "d")), 
+		transitionColor("d", 1, 1, 1, 0, 1, setKey("colorKey", "a"))
 	];
 
 	var orbitInstructions = [
-		orbit("a", 2, 1, setKey("orbitKey`", "a"))
+		orbit("a", 1, 2, setKey("orbitKey`", "a"))
 	];
 	
 	 addInstructions(obj, colorInstructions);
 
 	 addInstructions(obj, moveInstructions);
-	
-	 addInstructions(obj, testInstructions);
 	
      addInstructions(sphere, orbitInstructions);
 }
