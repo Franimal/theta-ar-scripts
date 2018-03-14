@@ -26,7 +26,7 @@ function start(){
 		];
 		
 		var testInstructions = [
-			instructionTest();
+			instructionTest()
 		];
 	setState(ob, "moveKey", "a");
 
