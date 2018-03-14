@@ -13,8 +13,8 @@ function setKey(keyName, keyValue) {
 }
 
 function start(){	
-	var obj = createCube("Left", new Vector3(-0.5, 0, 2), new Vector3(0, 0, 0), new Vector3(0.4, 0.4, 0.4));
-	var sphere = createSphere("Sphere", new Vector3(-0.5, 0, 2), new Vector3(0, 0, 0), new Vector3(0.4, 0.4, 0.4));
+	var obj = createCube("Left", new Vector3(-0.5, 0, 2), new Vector3(0, 0, 0), new Vector3(0.1, 0.1, 0.1));
+	var sphere = createSphere("Sphere", new Vector3(-0.5, 0, 2), new Vector3(0, 0, 0), new Vector3(0.1, 0.1, 0.1));
 	
 	setState(obj, function (currentState) {
 		return {
