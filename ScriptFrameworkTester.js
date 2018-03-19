@@ -13,83 +13,77 @@ function setKey(keyName, keyValue) {
 }
 
 function start(){	
-	var obj = createCube("Left", new Vector3(-0.5, 0, 2), new Vector3(0, 0, 0), new Vector3(0.1, 0.1, 0.1));
+	var saber = cylinder();
 	
-	var sphere = createSphere("Sphere", new Vector3(0, 0, 3), new Vector3(0, 0, 0), new Vector3(0.2, 0.2, 0.2));
-	var sphere2 = createSphere("Sphere", new Vector3(0, 0, 4), new Vector3(0, 0, 0), new Vector3(0.2, 0.2, 0.2)); 
+	wrap(saber)
+		.scale(0.05, 0.05, 0.5)
+		.color(1, 0.1, 0, 0.8)
+		.emit(1, 0.1, 0, 0.8);
+		
+	leftHand(saber);
+
+	wrap(floor(20, 0))
+		.texture("https://i.imgur.com/kH7jfKt.png")
+		.tileTexture(10, 10)
+		.color(0, 0.3, 1, 0.9)
+		.emit(0, 1, 1, 1);
 	
-	var cube = createCube("FlyUpCube", new Vector3(1, 0, 2), new Vector3(0, 0, 0), new Vector3(0.1, 0.1, 0.1));
+	var obj = cube("Left");
 	
-	setState(obj, function (currentState) {
-		return {
+	wrap(obj)
+		.move(-0.5, 0, 2)
+		.scale(0.1, 0.1, 0.1)
+		.state({
 			moveKey: 'a',
 			colorKey: 'a',
 			testKey: 'a'
-		};
-	});
+		})
+		.instructions([
+			transitionColor("a", 1, 0, 0, 1, 1, setKey("colorKey", "b")), 
+			transitionColor("b", 0, 1, 0, 1, 1, setKey("colorKey", "c")), 
+			transitionColor("c", 0, 0, 1, 1, 1, setKey("colorKey", "d")), 
+			transitionColor("d", 1, 1, 1, 0, 1, setKey("colorKey", "a"))		
+		])
+		.instruction(transitionPos("a", 0, 0, 1, 1, setKey("moveKey", "b")))
+		.instruction(transitionPos("b", -0.2, 0, 1, 1, setKey("moveKey", "c"))) 
+		.instruction(transitionPos("c", 0, 0, 1, 1, setKey("moveKey", "d")))
+		.instruction(transitionPos("d", 0, 0.2, 1, 1, setKey("moveKey", "a")));
 	
-	// activeInstructions: ['move1', 'color1', 'test1']
-	// activate('')
-	// deActivate('')
-	// setActiveInstructions(['', '', ''])
+	var fadeCloseSphere = sphere("Sphere");	
 	
-	setState(sphere, function (currentState) {
-		return {
+	wrap(fadeCloseSphere)
+		.move(0, 0, 3)
+		.scale(0.2, 0.2, 0.2)
+		.state({
 			orbitKey: 'a'
-		};
-	});
+		})
+		.instruction(fadeWhenClose("fade", 10, 0.5, setKey("orbitKey", "a")));
 	
-	setState(cube, function(currentState) {
-		return {
+	var sphere2 = createSphere("Sphere"); 	
+	wrap(sphere2)
+		.move(0, 0, 4)
+		.rotate(100, 0, 0)
+		.scale(0.2, 0.2, 0.2)
+		.state({
+			orbitKey: 'a'
+		})
+		.instruction(orbitHorizontal("a", 1, 5, setKey("orbitKey`", "a")));
+	
+	var cube2 = cube("FlyUpCube")
+	wrap(cube2)
+		.move(1, 0, 2)
+		.scale(0.1, 0.1, 0.1)
+		.state({
 			state: 'start',
 			moveKey: 'a',
 			colorKey: 'a'
-		};
-	});
-	
-	var moveInstructions = [
-		transitionPos("a", 0, 0, 1, 1, setKey("moveKey", "b")), 
-		transitionPos("b", -0.2, 0, 1, 1, setKey("moveKey", "c")), 
-		transitionPos("c", 0, 0, 1, 1, setKey("moveKey", "d")),
-		transitionPos("d", 0, 0.2, 1, 1, setKey("moveKey", "a")),
-	];
-
-	var colorInstructions = [
-		transitionColor("a", 1, 0, 0, 1, 1, setKey("colorKey", "b")), 
-		transitionColor("b", 0, 1, 0, 1, 1, setKey("colorKey", "c")), 
-		transitionColor("c", 0, 0, 1, 1, 1, setKey("colorKey", "d")), 
-		transitionColor("d", 1, 1, 1, 0, 1, setKey("colorKey", "a"))		
-	];
-
-	var orbitInstructions = [
-		//orbitHorizontal("a", 1, 5, setKey("orbitKey`", "a")),
-		//destroyOnHit("a", sphere2)
-		fadeWhenClose("fade", 10, 0.5, setKey("orbitKey", "a"))
-	];
-	
-	var orbitInstructions2 = [
-		//orbitVertical("a", 1, 5, setKey("orbitKey`", "a")),
-		//destroyOnHit("a", sphere),
-		fadeWhenClose("fade", 10, 0.5, setKey("orbitKey", "a"))
-	];
-	
-	var cubeInstructions = [
-		transitionColor("b", 0, 1, 0, 1, 1, setKey("state", "start")),
-		playerDistanceTrigger("start", 1, function() {setKey("moveKey", "do"); setKey("colorKey", "do")}),
-		transitionColor("do", 0, 1, 0, 1, 1, setKey("state", "do")),
-		transitionPos("do", 0, 0.2, 1, 1, setKey("state", "do"))
-	];
-	
-	 addInstructions(obj, colorInstructions);
-
-	 addInstructions(obj, moveInstructions);
-	
-     addInstructions(sphere, orbitInstructions);
-	 
-	 addInstructions(sphere2, orbitInstructions2);
-	 
-	 addInstructions(cube, cubeInstructions);
-	 
+		})
+		.instructions([
+			transitionColor("b", 0, 1, 0, 1, 1, setKey("state", "start")),
+			playerDistanceTrigger("start", 1, function() {setKey("state", "do"); setKey("state", "do")}),
+			transitionColor("do", 0, 1, 0, 1, 1, setKey("state", "do")),
+			transitionPos("do", 0, 0.2, 1, 1, setKey("state", "do"))
+		]);
 }
 
 function update(){

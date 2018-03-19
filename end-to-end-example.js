@@ -275,7 +275,7 @@ var cubeA = null;
 var cubeB = null;
 var cubeC = null;
 
-function onClick(obj){
+function onClickEvent(obj){
 	if(playing){
 		var isInList = inList(objects, obj);
 		
