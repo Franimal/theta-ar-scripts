@@ -110,15 +110,18 @@ function update(time, player, left, right){
 	if(left){		
 		if(left.grasped){
 			if(!saberOn){
+				saberOn = true;
 				enable(saberBlade);
 			}
 		} else {
 			if(saberOn){
+				saberOn = false;
 				disable(saberBlade);
 			}
 		}
 		if(left.menuPressed){
 			if(!saberEnabled){
+				saberEnabled = true;
 				log("Setting saber hilt.");
 				enable(saberHilt);
 				log("enabled.");
