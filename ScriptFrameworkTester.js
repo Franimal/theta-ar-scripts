@@ -17,7 +17,7 @@ var saberBlade = null;
 
 function start(){
 	saberHilt = createItem("lightsaber");
-	wrap(saberHilt).scale(0.5, 0.5, 0.5);
+	size(saberHilt, 0.3);
 		
 	saberBlade = cylinder();
 	
@@ -119,8 +119,11 @@ function update(time, player, left, right){
 		}
 		if(left.menuPressed){
 			if(!saberEnabled){
+				log("Setting saber hilt.");
 				enable(saberHilt);
+				log("enabled.");
 				leftHand(saberHilt);
+				log("set.");
 			}
 		}
 		if(left.selectPressed){
@@ -130,15 +133,15 @@ function update(time, player, left, right){
 			
 		}
 		if(left.thumbstickPressed){
-			
+			reloadScript();
 		}
 
-		log(left.selectPressedAmount);
+		//log(left.selectPressedAmount);
 		
-		log(left.touchpadPosition);
+		//log(left.touchpadPosition);
 
-		log(left.touchpadTouched);
-		log(left.thumbstickPosition);
+		//log(left.touchpadTouched);
+		//log(left.thumbstickPosition);
 
 	}   
 }        
