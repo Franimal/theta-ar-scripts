@@ -97,16 +97,28 @@ function bindPosition(gameObject){
 
 function update(time, player, left, right){
 	if(left){		
-		log(left.grasped);
-		log(left.menuPressed);
-		
-		log(left.selectPressed);
+		if(left.grasped){
+			
+		}
+		if(left.menuPressed){
+			
+		}
+		if(lfet.selectPressed){
+			
+		}
+	    if(left.touchpadPressed){
+			
+		}
+		if(left.thumbstickPressed){
+			
+		}
+
 		log(left.selectPressedAmount);
 		
 		log(left.touchpadPosition);
-		log(left.touchpadPressed);
+
 		log(left.touchpadTouched);
 		log(left.thumbstickPosition);
-		log(left.thumbstickPressed);
+
 	}   
 }        
