@@ -1,5 +1,5 @@
 function setup(){
-
+	LoadAssetFromUrl("https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/Models/lightsaber/scene.gltf", "lightsaber");
 }
 
 function setKey(keyName, keyValue) {
@@ -12,18 +12,26 @@ function setKey(keyName, keyValue) {
 	}
 }
 
+var saberHilt = null;
+var saberBlade = null;
+
 function start(){
-	var saber = cylinder();
+	saberHilt = createItem("lightsaber");
+	wrap(saberHilt).scale(0.5, 0.5, 0.5);
+		
+	saberBlade = cylinder();
 	
-	wrap(saber)
-		.scale(0.05, 0.05, 0.5)
+	wrap(saberBlade)
+		.scale(0.05, 0.02, 1)
 		.color(1, 0.1, 0, 0.8)
 		.emit(1, 0.1, 0, 0.8);
 		
-	var saberParent = parent(saber);
-
-	move(saber, 0, 0, 0.1);
-	leftHand(saberParent);
+	setParent(saberBlade, saberHilt);
+	
+	move(saberBlade, 0, 0, 0.5);
+	
+	disable(saberBlade);
+	disable(saberHilt);		
 
 	wrap(floor(20, 0))
 		.texture("https://i.imgur.com/kH7jfKt.png")
@@ -95,15 +103,26 @@ function bindPosition(gameObject){
 	}
 }
 
+var saberEnabled = false;
+var saberOn = false;
+
 function update(time, player, left, right){
 	if(left){		
 		if(left.grasped){
-			
+			if(!saberOn){
+				enable(saberBlade);
+			}
+		} else {
+			if(saberOn){
+				disable(saberBlade);
+			}
 		}
 		if(left.menuPressed){
-			
+			if(!saberEnabled){
+				leftHand(saberHilt);
+			}
 		}
-		if(lfet.selectPressed){
+		if(left.selectPressed){
 			
 		}
 	    if(left.touchpadPressed){
