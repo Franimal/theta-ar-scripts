@@ -1,5 +1,5 @@
 function setup(){
-	LoadAssetFromUrl("https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/Models/lightsaber/scene.gltf", "lightsaber");
+	loadAssetFromUrl("https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/Models/lightsaber/scene.gltf", "lightsaber");
 }
 
 function setKey(keyName, keyValue) {
@@ -119,6 +119,7 @@ function update(time, player, left, right){
 		}
 		if(left.menuPressed){
 			if(!saberEnabled){
+				enable(saberHilt);
 				leftHand(saberHilt);
 			}
 		}
