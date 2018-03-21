@@ -12,7 +12,7 @@ function setKey(keyName, keyValue) {
 	}
 }
 
-function start(){	
+function start(){
 	var saber = cylinder();
 	
 	wrap(saber)
@@ -20,7 +20,10 @@ function start(){
 		.color(1, 0.1, 0, 0.8)
 		.emit(1, 0.1, 0, 0.8);
 		
-	leftHand(saber);
+	var saberParent = parent(saber);
+
+	move(saber, 0, 0, 0.1);
+	leftHand(saberParent);
 
 	wrap(floor(20, 0))
 		.texture("https://i.imgur.com/kH7jfKt.png")
@@ -86,6 +89,27 @@ function start(){
 		]);
 }
 
-function update(){
-
+function bindPosition(gameObject){
+	return function(transform){
+		gameObject.position = transform.position;
+	}
 }
+
+function update(time, player, left, right){
+	if(left){	
+	
+	wrap(obj).instruction(bindLeftTouchpad(obj))
+	
+		log(left.grasped);
+		log(left.menuPressed);
+		
+		log(left.selectPressed);
+		log(left.selectPressedAmount);
+		
+		log(left.touchpadPosition);
+		log(left.touchpadPressed);
+		log(left.touchpadTouched);
+		log(left.thumbstickPosition);
+		log(left.thumbstickPressed);
+	}   
+}        

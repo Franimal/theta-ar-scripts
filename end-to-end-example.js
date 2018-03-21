@@ -205,7 +205,7 @@ function finishExhibit(){
 	playing = true;
 }
 
-function update(){
+function update(time, player, left, right){
    
 }
 
