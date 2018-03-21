@@ -106,6 +106,10 @@ function bindPosition(gameObject){
 var saberEnabled = false;
 var saberOn = false;
 
+function reload(){
+	reloadScript();
+}
+
 function update(time, player, left, right){
 	if(left){		
 		if(left.grasped){
@@ -122,11 +126,8 @@ function update(time, player, left, right){
 		if(left.menuPressed){
 			if(!saberEnabled){
 				saberEnabled = true;
-				log("Setting saber hilt.");
 				enable(saberHilt);
-				log("enabled.");
 				leftHand(saberHilt);
-				log("set.");
 			}
 		}
 		if(left.selectPressed){
