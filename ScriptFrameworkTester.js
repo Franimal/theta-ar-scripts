@@ -96,10 +96,7 @@ function bindPosition(gameObject){
 }
 
 function update(time, player, left, right){
-	if(left){	
-	
-	wrap(obj).instruction(bindLeftTouchpad(obj))
-	
+	if(left){		
 		log(left.grasped);
 		log(left.menuPressed);
 		
