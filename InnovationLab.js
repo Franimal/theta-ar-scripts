@@ -14,6 +14,8 @@ function setKey(keyName, keyValue) {
 
 var saberHilt = null;
 
+var baseUrl = "https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/";
+
 function start(){
 	saberHilt = createItem("lightsaber");
 	size(saberHilt, 0.3);	
@@ -21,7 +23,7 @@ function start(){
 
 	if(!isHololens()){
 		wrap(floor(10, 0))
-			.texture("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/TiledGrid.png")
+			.texture(baseUrl + "TiledGrid.png")
 			.color(0, 0.3, 1, 0.9)
 			.emit(0, 1, 1, 1);	
 	}
@@ -30,32 +32,52 @@ function start(){
 	
 	var veracidataParent = empty();
 	
-	wrap(createPlane("left"))
-		.texture("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/VeracidataLeft.png")
+	wrap(plane("left"))
+		.texture(baseUrl + "VeracidataLeft.png")
 		.parent(veracidataParent)
-		.move(-1, 0, 0);
+		.move(-3, 0.5, 0.5)
+		.rotate(-90, 0, -20)
+		.scale(0.25, 1, 0.5);
 	
-	wrap(createPlane("center"))
-		.texture("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/VeracidataCenter.png")
+	wrap(plane("center"))
+		.texture(baseUrl + "VeracidataCenter.png")
 		.parent(veracidataParent)
-		.move(0, 0, 0);
+		.move(0, 0.5, 1.12)
+		.rotate(-90, 0, 0)
+		.scale(0.25, 1, 0.5);
 		
-	wrap(createPlane("right"))
-		.texture("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/VeracidataLeft.png")
+	wrap(plane("right"))
+		.texture(baseUrl + "VeracidataLeft.png")
 		.parent(veracidataParent)
-		.move(1, 0, 0);
+		.move(3, 0.5, 0.5)
+		.rotate(-90, 0, 20)
+		.scale(0.25, 1, 0.5);
 		
-	move(veracidataParent, 0, 0, 2);
+	move(veracidataParent, 0, 0, 20);
 			
 	//SIX DEGREES
-	
+	wrap(cylinder)
+		.move(-10, 0, 10)
+		.scale(1, 0.2, 1);
+		
+	wrap(plane("sdtitle"))
+		.texture(baseUrl + "SixDegreesTitle.png")
+		.move(-10, 3, 10);
+		
+	wrap(cube("sixdegreeslogo"))
+		.texture(baseUrl + "SixDegreesLogo.png")
+		.move(-10, 3, 10)
+		.instruction(orbitHorizontal("a", 1, 5, function(){}));
+	//baseUrl + "SixDegreesTitle.png"
+	//
 	//MIXED REALITY
 	
 	//INTERNS
 	
 	//CRAIGS
 	
-	//YUPPL
+	//YUPPL	
+	//main green color: #1ab394
 }
 
 var recording = false;
