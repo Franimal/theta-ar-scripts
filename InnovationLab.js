@@ -1,5 +1,5 @@
 function setup(){
-	loadAssetFromUrl("https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/Models/lightsaber/scene.gltf", "lightsaber");
+	loadAssetFromUrl("https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/Models/lightsaber/scene.gltf", "lightsaber");	
 }
 
 function setKey(keyName, keyValue) {
@@ -28,6 +28,25 @@ function start(){
 	
 	//VERACIDATA
 	
+	var veracidataParent = empty();
+	
+	wrap(createPlane("left"))
+		.texture("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/VeracidataLeft.png")
+		.parent(veracidataParent)
+		.move(-1, 0, 0);
+	
+	wrap(createPlane("center"))
+		.texture("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/VeracidataCenter.png")
+		.parent(veracidataParent)
+		.move(0, 0, 0);
+		
+	wrap(createPlane("right"))
+		.texture("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/VeracidataLeft.png")
+		.parent(veracidataParent)
+		.move(1, 0, 0);
+		
+	move(veracidataParent, 0, 0, 2);
+			
 	//SIX DEGREES
 	
 	//MIXED REALITY
