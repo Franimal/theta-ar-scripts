@@ -21,7 +21,7 @@ function start(){
 
 	if(!isHololens()){
 		wrap(floor(10, 0))
-			.texture("https://i.imgur.com/fZH0DIO.png")
+			.texture("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/TiledGrid.png")
 			.color(0, 0.3, 1, 0.9)
 			.emit(0, 1, 1, 1);	
 	}
