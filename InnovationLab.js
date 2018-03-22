@@ -20,12 +20,23 @@ function start(){
 	disable(saberHilt);		
 
 	if(!isHololens()){
-		wrap(floor(20, 0))
-			.texture("https://i.imgur.com/kH7jfKt.png")
-			.tileTexture(10, 10)
+		wrap(floor(10, 0))
+			.texture("https://i.imgur.com/fZH0DIO.png")
 			.color(0, 0.3, 1, 0.9)
 			.emit(0, 1, 1, 1);	
 	}
+	
+	//VERACIDATA
+	
+	//SIX DEGREES
+	
+	//MIXED REALITY
+	
+	//INTERNS
+	
+	//CRAIGS
+	
+	//YUPPL
 }
 
 var recording = false;
