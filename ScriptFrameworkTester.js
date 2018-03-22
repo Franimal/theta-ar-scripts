@@ -23,22 +23,24 @@ function start(){
 	
 	wrap(saberBlade)
 		.scale(0.05, 0.02, 1)
+		.rotate(0, -90, 90)
 		.color(1, 0.1, 0, 0.8)
 		.emit(1, 0.1, 0, 0.8);
 		
 	setParent(saberBlade, saberHilt);
 	
-	move(saberBlade, 0, 0, 0.5);
+	move(saberBlade, 0, 0, 1);
 	
 	disable(saberBlade);
 	disable(saberHilt);		
 
-	wrap(floor(20, 0))
-		.texture("https://i.imgur.com/kH7jfKt.png")
-		.tileTexture(10, 10)
-		.color(0, 0.3, 1, 0.9)
-		.emit(0, 1, 1, 1);
-	
+	if(isHololens()){
+		wrap(floor(20, 0))
+			.texture("https://i.imgur.com/kH7jfKt.png")
+			.tileTexture(10, 10)
+			.color(0, 0.3, 1, 0.9)
+			.emit(0, 1, 1, 1);	
+	}
 	var obj = cube("Left");
 	
 	wrap(obj)
@@ -70,7 +72,7 @@ function start(){
 		})
 		.instruction(fadeWhenClose("fade", 10, 0.5, setKey("orbitKey", "a")));
 	
-	var sphere2 = createSphere("Sphere"); 	
+	var sphere2 = createSphere("Sphere");
 	wrap(sphere2)
 		.move(0, 0, 4)
 		.rotate(100, 0, 0)
@@ -95,6 +97,8 @@ function start(){
 			transitionColor("do", 0, 1, 0, 1, 1, setKey("state", "do")),
 			transitionPos("do", 0, 0.2, 1, 1, setKey("state", "do"))
 		]);
+		//onTap("reload");
+		showSpatialMesh(true);
 }
 
 function bindPosition(gameObject){
@@ -128,6 +132,7 @@ function update(time, player, left, right){
 				saberEnabled = true;
 				enable(saberHilt);
 				leftHand(saberHilt);
+				rotate(saberHilt, 45, 45, 0);
 			}
 		}
 		if(left.selectPressed){
