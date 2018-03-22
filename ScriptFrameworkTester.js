@@ -34,7 +34,7 @@ function start(){
 	disable(saberBlade);
 	disable(saberHilt);		
 
-	if(isHololens()){
+	if(!isHololens()){
 		wrap(floor(20, 0))
 			.texture("https://i.imgur.com/kH7jfKt.png")
 			.tileTexture(10, 10)
