@@ -97,8 +97,27 @@ function start(){
 			transitionColor("do", 0, 1, 0, 1, 1, setKey("state", "do")),
 			transitionPos("do", 0, 0.2, 1, 1, setKey("state", "do"))
 		]);
-		//onTap("reload");
 		showSpatialMesh(true);
+}
+
+var recording = false;
+
+function toggleVideoRecording(){
+	if(recording){
+		stopRecordingVideo();
+	} else {
+		recordVideo();
+	}
+}
+
+function recordVideo(){
+	recording = true;
+	startVideoRecording();
+}
+
+function stopRecordingVideo(){
+	recording = false;
+	stopVideoRecording();
 }
 
 function bindPosition(gameObject){
@@ -108,7 +127,7 @@ function bindPosition(gameObject){
 }
 
 var saberEnabled = false;
-var saberOn = false;
+var recording = false;
 
 function reload(){
 	reloadScript();
@@ -117,15 +136,7 @@ function reload(){
 function update(time, player, left, right){
 	if(left){		
 		if(left.grasped){
-			if(!saberOn){
-				saberOn = true;
-				enable(saberBlade);
-			}
-		} else {
-			if(saberOn){
-				saberOn = false;
-				disable(saberBlade);
-			}
+			
 		}
 		if(left.menuPressed){
 			if(!saberEnabled){
@@ -136,13 +147,21 @@ function update(time, player, left, right){
 			}
 		}
 		if(left.selectPressed){
-			
+			if(!recording){
+				recording = true;
+				recordVideo();
+			}
+		} else {
+			if(recording){
+				recording = false;
+				stopRecordingVideo();
+			}
 		}
 	    if(left.touchpadPressed){
 			
 		}
 		if(left.thumbstickPressed){
-			reloadScript();
+
 		}
 
 		//log(left.selectPressedAmount);

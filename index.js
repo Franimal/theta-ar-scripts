@@ -27,6 +27,24 @@
 	"author":"Theta",
 	"version":"1.0",
 	"thumbnail":"https://www.theta.co.nz/images/thetaLogo_sm.png"
+},
+{
+	"filename":"https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/InnovationLab.js",
+	"includes":["https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/lib/game-object-wrapper.js"],
+	"title":"Innovation Lab Showcase", 
+	"description":"A showcase of the recent work of the Innovation Lab.", 
+	"author":"Theta",
+	"version":"1.0",
+	"thumbnail":"https://www.theta.co.nz/images/thetaLogo_sm.png"
+},
+{
+	"filename":"C:/Projects/theta-ar-scripts/InnovationLab.js",
+	"includes":["C:/Projects/theta-ar-scripts/lib/game-object-wrapper.js"],
+	"title":"LOCAL: Innovation Lab Showcase", 
+	"description":"A showcase of the recent work of the Innovation Lab.", 
+	"author":"Theta",
+	"version":"1.0",
+	"thumbnail":"https://www.theta.co.nz/images/thetaLogo_sm.png"
 }
 ]
 }
