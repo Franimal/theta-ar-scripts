@@ -1,5 +1,5 @@
 function setup(){
-	loadAssetFromUrl("https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/Models/lightsaber/scene.gltf", "lightsaber");	
+	//loadAssetFromUrl("https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/Models/lightsaber/scene.gltf", "lightsaber");	
 }
 
 function setKey(keyName, keyValue) {
@@ -17,9 +17,9 @@ var saberHilt = null;
 var baseUrl = "https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/";
 
 function start(){
-	saberHilt = createItem("lightsaber");
-	size(saberHilt, 0.3);	
-	disable(saberHilt);		
+	//saberHilt = createItem("lightsaber");
+	//size(saberHilt, 0.3);	
+	//disable(saberHilt);		
 
 	if(!isHololens()){
 		wrap(floor(10, 0))
@@ -57,17 +57,19 @@ function start(){
 			
 	//SIX DEGREES
 	wrap(cylinder("table"))
-		.move(-10, 0, 10)
-		.scale(1, 0.2, 1);
+		.move(-10, -1.733, 10)
+		.scale(2.6628, 0.2877, 2.662839);
 		
 	wrap(plane("sdtitle"))
 		.texture(baseUrl + "SixDegreesTitle.png")
-		.move(-10, 3, 10);
+		.move(-10, -1.077, 10)
+		.rotate(90, 180, 41.00899)
+		.scale(0.2, 0.2, 0.06);
 		
 	wrap(cube("sixdegreeslogo"))
 		.texture(baseUrl + "SixDegreesLogo.png")
-		.move(-10, 3, 10)
-		.instruction(orbitHorizontal("a", 1, 5, function(){}));
+		.move(-10, -1.39, 10)
+		.instruction(orbitHorizontal("a", 2, 3, function(){}));
 	//baseUrl + "SixDegreesTitle.png"
 	//
 	//MIXED REALITY
@@ -118,9 +120,9 @@ function update(time, player, left, right){
 		if(left.menuPressed){
 			if(!saberEnabled){
 				saberEnabled = true;
-				enable(saberHilt);
-				leftHand(saberHilt);
-				rotate(saberHilt, 45, 45, 0);
+			//	enable(saberHilt);
+			//	leftHand(saberHilt);
+			//	rotate(saberHilt, 45, 45, 0);
 			}
 		}
 		if(left.selectPressed){
