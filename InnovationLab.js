@@ -53,27 +53,56 @@ function start(){
 		.rotate(-90, 0, 35)
 		.scale(0.25, 1, 0.5);
 		
+	var veraciparent = empty();
+	wrap(veraciparent).parent(veracidataParent).rotate(90, 180, 0).scale(0.1, 0.1, 0.1);
+		
 	wrap(plane("1"))
 		.texture(baseUrl + "Veracidata/001Veracidata.png")
-		.parent(veracidataParent);
+		.parent(veraciparent)
+		.move(29.67, -4.8, -17.61)
+		.scale(2.184, 2.184, 2.184)
+		.rotate(0, 0, 33.825);
 	wrap(plane("1"))
 		.texture(baseUrl + "Veracidata/002Veracidata.png")
-		.parent(veracidataParent);
+		.parent(veraciparent)
+		.move(29.67, -4.8, 6.1)
+		.scale(2.184, 2.184, 2.184)
+		.rotate(0, 0, 33.825);
 	wrap(plane("1"))
 		.texture(baseUrl + "Veracidata/003Veracidata.png")
-		.parent(veracidataParent);
+		.parent(veraciparent)
+		.move(0, -10, -18)
+		.scale(2, 2, 2)
+		.rotate(0, 0, 0);
 	wrap(plane("1"))
 		.texture(baseUrl + "Veracidata/004Veracidata.png")
-		.parent(veracidataParent);
+		.parent(veraciparent)
+		.move(0, -10, 4.22)
+		.scale(2, 2, 2)
+		.rotate(0, 0, 0);
 	wrap(plane("1"))
 		.texture(baseUrl + "Veracidata/005Veracidata.png")
-		.parent(veracidataParent);
+		.parent(veraciparent)
+		.move(-30, -4, -17.8)
+		.scale(2, 2, 2)
+		.rotate(0, 0, -36);
 	wrap(plane("1"))
 		.texture(baseUrl + "Veracidata/006Veracidata.png")
-		.parent(veracidataParent);
+		.parent(veraciparent)
+		.move(-30, -4, 4.5)
+		.scale(2, 2, 2)
+		.rotate(0, 0, -36);		
 		
 	move(veracidataParent, 9, 0, 13.64);
 	rotate(veracidataParent, 0, 92.705, 0);
+			
+	wrap(plane("VERACIDATA"))
+		.texture(baseUrl + "Veracidata/veracidatacover.png")
+		.parent(veraciparent)
+		.move(10.10892, -1.718, 13.65)	
+		.rotate(0, 92.705, 0)
+		.scale(1, 1, 1)
+		.color(200/255, 200/255, 200/255, 1);
 			
 	//SIX DEGREES
 	wrap(cylinder("table"))
