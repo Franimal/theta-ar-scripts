@@ -36,7 +36,7 @@ function start(){
 		.texture(baseUrl + "VeracidataLeft.png")
 		.parent(veracidataParent)
 		.move(-3, 0.5, 0.5)
-		.rotate(-90, 0, -20)
+		.rotate(-90, 0, -35)
 		.scale(0.25, 1, 0.5);
 	
 	wrap(plane("center"))
@@ -50,28 +50,39 @@ function start(){
 		.texture(baseUrl + "VeracidataLeft.png")
 		.parent(veracidataParent)
 		.move(3, 0.5, 0.5)
-		.rotate(-90, 0, 20)
+		.rotate(-90, 0, 35)
 		.scale(0.25, 1, 0.5);
 		
-	move(veracidataParent, 0, 0, 20);
+	move(veracidataParent, 9, 0, 13.64);
+	rotate(veracidataParent, 0, 92.705, 0);
 			
 	//SIX DEGREES
 	wrap(cylinder("table"))
 		.move(-10, -1.733, 10)
 		.scale(2.6628, 0.2877, 2.662839);
 		
-	wrap(plane("sdtitle"))
-		.texture(baseUrl + "SixDegreesTitle.png")
-		.move(-10, -1.077, 10)
-		.rotate(90, 180, 41.00899)
-		.scale(0.2, 0.2, 0.06);
+	wrap(text("SIX DEGREES"))
+		.move(-10, -0.85, 10)	
+		.rotate(0, -60, 0)
+		.scale(1, 1, 1)
+		.color(56/255, 66/255, 75/255, 1);
 		
-	wrap(cube("sixdegreeslogo"))
+	wrap(text("PLANNING"))
+		.move(-10, -1.077, 10)
+		.rotate(0, -60, 0)
+		.scale(1, 1, 1)
+		.color(187/255, 42/255, 47/255, 1);
+		
+	var orbiter = plane("sixdegreeslogo");
+	wrap(orbiter)
 		.texture(baseUrl + "SixDegreesLogo.png")
-		.move(-10, -1.39, 10)
+		.move(-9.9, -1.39, 9.919)
+		.rotate(90, 0, -118)
+		.scale(0.1, 0.1, 0.1)
 		.instruction(orbitHorizontal("a", 2, 3, function(){}));
-	//baseUrl + "SixDegreesTitle.png"
-	//
+		
+	setRenderQueue(orbiter, 3001);
+
 	//MIXED REALITY
 	
 	//INTERNS
@@ -80,6 +91,24 @@ function start(){
 	
 	//YUPPL	
 	//main green color: #1ab394
+	
+	//MiniDevs Wall
+	var minidevs = empty();
+	
+	var x = -9.92;
+	var y = 0;
+	var z = 21.82;
+	
+	move(minidevs, x, y, z);
+	
+	var mdTitle = text("MINIDEVS");
+	
+	wrap(mdTitle)	
+		.move(x, y, z)
+		.rotate(0, -90, 0)
+		.scale(1.5, 1.5, 1.5)
+		.color(1, 1, 1, 1);
+	
 }
 
 var recording = false;
