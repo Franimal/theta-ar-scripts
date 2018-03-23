@@ -54,22 +54,22 @@ function start(){
 		.scale(0.25, 1, 0.5);
 		
 	wrap(plane("1"))
-		.texture(baseUrl + "Veracidata/001 Veracidata.PNG")
+		.texture(baseUrl + "Veracidata/001 Veracidata.png")
 		.parent(veracidataParent);
 	wrap(plane("1"))
-		.texture(baseUrl + "Veracidata/002 Veracidata.PNG")
+		.texture(baseUrl + "Veracidata/002 Veracidata.png")
 		.parent(veracidataParent);
 	wrap(plane("1"))
-		.texture(baseUrl + "Veracidata/003 Veracidata.PNG")
+		.texture(baseUrl + "Veracidata/003 Veracidata.png")
 		.parent(veracidataParent);
 	wrap(plane("1"))
-		.texture(baseUrl + "Veracidata/004 Veracidata.PNG")
+		.texture(baseUrl + "Veracidata/004 Veracidata.png")
 		.parent(veracidataParent);
 	wrap(plane("1"))
-		.texture(baseUrl + "Veracidata/005 Veracidata.PNG")
+		.texture(baseUrl + "Veracidata/005 Veracidata.png")
 		.parent(veracidataParent);
 	wrap(plane("1"))
-		.texture(baseUrl + "Veracidata/006 Veracidata.PNG")
+		.texture(baseUrl + "Veracidata/006 Veracidata.png")
 		.parent(veracidataParent);
 		
 	move(veracidataParent, 9, 0, 13.64);
