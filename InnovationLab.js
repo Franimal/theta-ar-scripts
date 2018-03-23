@@ -99,9 +99,9 @@ function start(){
 	wrap(plane("VERACIDATA"))
 		.texture(baseUrl + "Veracidata/veracidatacover.png")
 		.parent(veraciparent)
-		.move(10.10892, -1.718, 13.65)	
-		.rotate(0, 92.705, 0)
-		.scale(1, 1, 1)
+		.move(0.01, 8.48, 15.61)	
+		.rotate(-14.804, 0, 0)
+		.scale(2.199319, 0.879728, 0.879728)
 		.color(200/255, 200/255, 200/255, 1);
 			
 	//SIX DEGREES
