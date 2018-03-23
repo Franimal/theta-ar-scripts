@@ -53,6 +53,25 @@ function start(){
 		.rotate(-90, 0, 35)
 		.scale(0.25, 1, 0.5);
 		
+	wrap(plane("1"))
+		.texture(baseUrl + "Veracidata/001 Veracidata.PNG")
+		.parent(veracidataParent);
+	wrap(plane("1"))
+		.texture(baseUrl + "Veracidata/002 Veracidata.PNG")
+		.parent(veracidataParent);
+	wrap(plane("1"))
+		.texture(baseUrl + "Veracidata/003 Veracidata.PNG")
+		.parent(veracidataParent);
+	wrap(plane("1"))
+		.texture(baseUrl + "Veracidata/004 Veracidata.PNG")
+		.parent(veracidataParent);
+	wrap(plane("1"))
+		.texture(baseUrl + "Veracidata/005 Veracidata.PNG")
+		.parent(veracidataParent);
+	wrap(plane("1"))
+		.texture(baseUrl + "Veracidata/006 Veracidata.PNG")
+		.parent(veracidataParent);
+		
 	move(veracidataParent, 9, 0, 13.64);
 	rotate(veracidataParent, 0, 92.705, 0);
 			
@@ -99,16 +118,73 @@ function start(){
 	var y = 0;
 	var z = 21.82;
 	
-	move(minidevs, x, y, z);
+	move(minidevs, x, y, z);	
+	rotate(minidevs, 0, -90, 0);
 	
 	var mdTitle = text("MINIDEVS");
 	
+	var images = empty();
+	wrap(images).parent(minidevs).rotate(90, 180, 0).scale(0.1, 0.1, 0.1);
+	
 	wrap(mdTitle)	
-		.move(x, y, z)
-		.rotate(0, -90, 0)
+		.parent(minidevs)
 		.scale(1.5, 1.5, 1.5)
 		.color(1, 1, 1, 1);
 	
+	var mdUrl = baseUrl + "/MiniDevs/";
+	
+	wrap(plane("1"))
+		.texture(mdUrl + "Another3DScanMinidev.png")
+		.parent(images)
+		.move(0, 0, -8.7);
+	wrap(plane("1"))
+		.texture(mdUrl + "brainstorming.png")
+		.parent(images)
+		.move(-18.5, 0, -0.2);
+	wrap(plane("1"))
+		.texture(mdUrl + "jimstart.png")
+		.parent(images)
+		.move(-12.8, 0, -10.9);
+	wrap(plane("1"))
+		.texture(mdUrl + "maherascanned.png")
+		.parent(images)
+		.move(-30.3, 0, -1.7);
+	wrap(plane("1"))
+		.texture(mdUrl + "MarianneVPMiniDevQuote.png")
+		.parent(images)
+		.move(-26.1, 0, -13.3);
+	wrap(plane("1"))
+		.texture(mdUrl + "MinidevPresentsXMAS.png")
+		.parent(images)
+		.move(30.76, 0, -1.03);
+	wrap(plane("1"))
+		.texture(mdUrl + "minidevsandmodels.png")
+		.parent(images)
+		.move(24.9, 0, -12.7);
+	wrap(plane("1"))
+		.texture(mdUrl + "MiniDevsGroupPhoto.png")
+		.parent(images)
+		.move(24.2, 0, 11.2);
+	wrap(plane("1"))
+		.texture(mdUrl + "MinidevWrapupTweet.png")
+		.parent(images)
+		.move(-13, 0, 11.1);
+	wrap(plane("1"))
+		.texture(mdUrl + "NewlandsKidsIdeas.png")
+		.parent(images)
+		.move(12.5, 0, 11.5);
+	wrap(plane("1"))
+		.texture(mdUrl + "sushi.png")
+		.parent(images)
+		.move(0, 0, 9.3);
+	wrap(plane("1"))
+		.texture(mdUrl + "TimDemoProjectR.png")
+		.parent(images)
+		.move(12.5, 0, -11.4);
+	wrap(plane("1"))
+		.texture(mdUrl + "TimInMR.png")
+		.parent(images)
+		.move(18.7, 0, 0);
 }
 
 var recording = false;
