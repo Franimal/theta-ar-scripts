@@ -56,7 +56,7 @@ function start(){
 	move(veracidataParent, 0, 0, 20);
 			
 	//SIX DEGREES
-	wrap(cylinder)
+	wrap(cylinder("table"))
 		.move(-10, 0, 10)
 		.scale(1, 0.2, 1);
 		
