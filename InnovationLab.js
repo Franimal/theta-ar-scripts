@@ -169,6 +169,143 @@ function start(){
 	
 	//CRAIGS
 	
+	//PGGW
+	var pggwParent = empty();
+	wrap(pggwParent).rotate(-90, 0, 90).scale(0.1, 0.1, 0.1).move(17.02, 0, 34.51);	
+	
+	wrap(plane("pgg1"))
+		.texture(baseUrl + "pggw/026PGGWrightsonLogo.jpg")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 209/730,  1)
+		.rotate(0, 180, 0);	
+		
+	wrap(plane("pgg2"))
+		.texture(baseUrl + "pggw/028PGGWrightsonPowerAppsLogo.png")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 508/600,  1)
+		.rotate(0, 180, 0);	
+		
+	wrap(plane("pgg3"))
+		.texture(baseUrl + "pggw/029powerapps.png")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 648/1000,  1)
+		.rotate(0, 180, 0);	
+		
+	wrap(plane("pgg4"))
+		.texture(baseUrl + "pggw/030MicrosoftFlow.jpg")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 250/424,  1)
+		.rotate(0, 180, 0);	
+		
+	wrap(plane("pgg5"))
+		.texture(baseUrl + "pggw/031Abbildung_Flow.png")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 325/580,  1)
+		.rotate(0, 180, 0);	
+
+	wrap(plane("pgg6"))
+		.texture(baseUrl + "pggw/032BotFramework.png")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 1,  1)
+		.rotate(0, 180, 0);		
+		
+	wrap(plane("pgg7"))
+		.texture(baseUrl + "pggw/033BotFramework.png")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 461/860,  1)
+		.rotate(0, 180, 0);		
+		
+	wrap(plane("pgg8"))
+		.texture(baseUrl + "pggw/034luis_with_microsoft_bot_framework_logo.png")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 510/825,  1)
+		.rotate(0, 180, 0);
+		
+	wrap(plane("pgg9"))
+		.texture(baseUrl + "pggw/035wearables-e1455299947895.jpg")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 353/730,  1)
+		.rotate(0, 180, 0);
+		
+	wrap(plane("pgg10"))
+		.texture(baseUrl + "pggw/036wearables5872-b3a7e62784a7ccd71650ab36a3ef27a7.jpg")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 660/1180,  1)
+		.rotate(0, 180, 0);		
+		
+	wrap(plane("pgg11"))
+		.texture(baseUrl + "pggw/037john-howard-loook-inc-uxui-design-for-vr-and-mixed-reality-28-638.jpg")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 493/638,  1)
+		.rotate(0, 180, 0);				
+		
+	wrap(plane("pgg12"))
+		.texture(baseUrl + "pggw/038smart-farming-1-500x383.jpg")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 383/500,  1)
+		.rotate(0, 180, 0);
+
+	wrap(plane("pgg13"))
+		.texture(baseUrl + "pggw/039plants-health.png")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 499/800,  1)
+		.rotate(0, 180, 0);
+
+	wrap(plane("pgg14"))
+		.texture(baseUrl + "pggw/slide001.png")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 720/1280,  1)
+		.rotate(0, 180, 0);
+		
+	wrap(plane("pgg14"))
+		.texture(baseUrl + "pggw/slide002.png")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 720/1280,  1)
+		.rotate(0, 180, 0);
+		
+	wrap(plane("pgg14"))
+		.texture(baseUrl + "pggw/slide003.png")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 720/1280,  1)
+		.rotate(0, 180, 0);
+		
+	wrap(plane("pgg14"))
+		.texture(baseUrl + "pggw/slide004.png")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 720/1280,  1)
+		.rotate(0, 180, 0);
+		
+	wrap(plane("pgg14"))
+		.texture(baseUrl + "pggw/slide005.png")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 720/1280,  1)
+		.rotate(0, 180, 0);
+		
+	wrap(plane("pgg14"))
+		.texture(baseUrl + "pggw/slide006.png")
+		.parent(pggwParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 720/1280,  1)
+		.rotate(0, 180, 0);
+		
 	//YUPPL	
 	//main green color: #1ab394
 	var yupplParent = empty();
