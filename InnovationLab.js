@@ -56,37 +56,37 @@ function start(){
 	var veraciparent = empty();
 	wrap(veraciparent).parent(veracidataParent).rotate(90, 180, 0).scale(0.1, 0.1, 0.1);
 		
-	wrap(plane("1"))
+	wrap(plane("vd1"))
 		.texture(baseUrl + "Veracidata/001Veracidata.png")
 		.parent(veraciparent)
 		.move(29.67, -4.8, -17.61)
 		.scale(2.184, 2.184, 2.184)
 		.rotate(0, 0, 33.825);
-	wrap(plane("1"))
+	wrap(plane("vd2"))
 		.texture(baseUrl + "Veracidata/002Veracidata.png")
 		.parent(veraciparent)
 		.move(29.67, -4.8, 6.1)
 		.scale(2.184, 2.184, 2.184)
 		.rotate(0, 0, 33.825);
-	wrap(plane("1"))
+	wrap(plane("vd3"))
 		.texture(baseUrl + "Veracidata/003Veracidata.png")
 		.parent(veraciparent)
 		.move(0, -10, -18)
 		.scale(2, 2, 2)
 		.rotate(0, 0, 0);
-	wrap(plane("1"))
+	wrap(plane("vd4"))
 		.texture(baseUrl + "Veracidata/004Veracidata.png")
 		.parent(veraciparent)
 		.move(0, -10, 4.22)
 		.scale(2, 2, 2)
 		.rotate(0, 0, 0);
-	wrap(plane("1"))
+	wrap(plane("vd5"))
 		.texture(baseUrl + "Veracidata/005Veracidata.png")
 		.parent(veraciparent)
 		.move(-30, -4, -17.8)
 		.scale(2, 2, 2)
 		.rotate(0, 0, -36);
-	wrap(plane("1"))
+	wrap(plane("vd6"))
 		.texture(baseUrl + "Veracidata/006Veracidata.png")
 		.parent(veraciparent)
 		.move(-30, -4, 4.5)
@@ -132,31 +132,31 @@ function start(){
 		
 	setRenderQueue(orbiter, 3001);
 	
-	wrap(plane("1"))
+	wrap(plane("sd1"))
 		.texture(baseUrl + "sixdegrees/021SixDegrees.png")
 		.parent(table)
 		.move(-1.1, 16.79, 0)
 		.scale(0.1, 0.1, 0.1)
 		.rotate(-232, 123, 2.5399);		
-	wrap(plane("1"))
+	wrap(plane("sd2"))
 		.texture(baseUrl + "sixdegrees/022SixDegrees.png")
 		.parent(table)
 		.move(0, 3.68, 0.641)
 		.scale(0.06518391, 0.1, 0.1)
 		.rotate(90, 180, 38.77);		
-	wrap(plane("1"))
+	wrap(plane("sd3"))
 		.texture(baseUrl + "sixdegrees/023SixDegrees.png")
 		.parent(table)
 		.move(-0.588, 3.56, 0.204)
 		.scale(0.04802127, 0.1, 0.1)
 		.rotate(-270, 180, 65.755);		
-	wrap(plane("1"))
+	wrap(plane("sd4"))
 		.texture(baseUrl + "sixdegrees/024SixDegrees.png")
 		.parent(table)
 		.move(-0.016, 6.84, 0.822)
 		.scale(0.0985442, 0.1, 0.4714607)
 		.rotate(90, 0, -142.451);		
-	wrap(plane("1"))
+	wrap(plane("sd5"))
 		.texture(baseUrl + "sixdegrees/025SixDegrees.png")
 		.parent(table)
 		.move(-0.412, 7.48, -0.164)
@@ -172,109 +172,118 @@ function start(){
 	//YUPPL	
 	//main green color: #1ab394
 	var yupplParent = empty();
-	wrap(yupplParent).parent(yupplParent).rotate(-90, 180, 0).scale(0.1, 0.1, 0.1);				
+	wrap(yupplParent).rotate(-90, 0, 90).scale(0.1, 0.1, 0.1).move(17.02, 0, 34.51);				
+		
+	var headerParent = empty();
+	wrap(headerParent).rotate(-90, 0, 90).scale(0.1, 0.1, 0.1);
+	setPosition(headerParent, newVector(17.01, 0.97, 31.93))
 		
 	wrap(text("Yuppl"))
+		.parent(yupplParent)
 		.scale(1, 1, 1)
 		.color(26/255, 179/255, 148/255, 1);
 		
-	wrap(plane("1"))
+	wrap(plane("yup1"))
 		.texture(baseUrl + "Yuppl/007Yuppl.png")
 		.parent(yupplParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(0.1, 0.1, 0.4285623)
-		.rotate(90, -90, 180);	
-		
-	wrap(plane("2"))
-		.texture(baseUrl + "Yuppl/008Yuppl.png")
-		.parent(yupplParent)
-		.move(-0.412, 7.48, -0.164)
-		.scale(0.1, 0.1, 0.4285623)
-		.rotate(90, -90, 180);
-		
-	wrap(plane("3"))
+		.scale(638/1047, 1,  1)
+		.rotate(0, 180, 0);	
+			
+	wrap(plane("yup2"))
 		.texture(baseUrl + "Yuppl/009Yuppl.png")
 		.parent(yupplParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(0.1, 0.1, 0.4285623)
-		.rotate(90, -90, 180);
+		.scale(1, 362/1041, 1)
+		.rotate(0, 180, 0);	
 		
-	wrap(plane("4"))
-		.texture(baseUrl + "Yuppl/010Yuppl.png")
+	wrap(plane("yup3"))
+		.texture(baseUrl + "Yuppl/008Yuppl.png")
 		.parent(yupplParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(0.1, 0.1, 0.4285623)
-		.rotate(90, -90, 180);
+		.scale(302/543, 1, 1)
+		.rotate(0, 180, 0);	
+					
 		
-	wrap(plane("5"))
+	wrap(plane("yup4"))
+		.texture(baseUrl + "Yuppl/010Yuppl.png")
+		.parent(headerParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(1, 160/1019, 160/1019)
+		.rotate(0, 180, 0);	
+		
+	wrap(plane("yup5"))
 		.texture(baseUrl + "Yuppl/011Yuppl.png")
 		.parent(yupplParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(0.1, 0.1, 0.4285623)
-		.rotate(90, -90, 180);wrap(plane("1"))
+		.scale(343/712, 1, 1)
+		.rotate(0, 180, 0);	
 
-	wrap(plane("6"))
+	wrap(plane("yup6"))
 		.texture(baseUrl + "Yuppl/012Yuppl.png")
 		.parent(yupplParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(0.1, 0.1, 0.4285623)
-		.rotate(90, -90, 180);
+		.scale(350/784, 1, 1)
+		.rotate(0, 180, 0);	
 		
-	wrap(plane("7"))
+	wrap(plane("yup7"))
 		.texture(baseUrl + "Yuppl/013Yuppl.png")
 		.parent(yupplParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(0.1, 0.1, 0.4285623)
-		.rotate(90, -90, 180);
+		.scale(338/771, 1, 1)
+		.rotate(0, 180, 0);	
 		
-	wrap(plane("8"))
+	wrap(plane("yup8"))
 		.texture(baseUrl + "Yuppl/014Yuppl.png")
-		.parent(yupplParent)
+		.parent(headerParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(0.1, 0.1, 0.4285623)
-		.rotate(90, -90, 180);
+		.scale(1, 262/763, 262/763)
+		.rotate(0, 180, 0);	
 		
-	wrap(plane("9"))
+	wrap(plane("yup9"))
 		.texture(baseUrl + "Yuppl/015Yuppl.png")
-		.parent(yupplParent)
+		.parent(headerParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(0.1, 0.1, 0.4285623)
-		.rotate(90, -90, 180);
+		.scale(1, 120/335, 120/335)
+		.rotate(0, 180, 0);	
 		
-	wrap(plane("10"))
+	wrap(plane("yup10"))
 		.texture(baseUrl + "Yuppl/016Yuppl.png")
 		.parent(yupplParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(0.1, 0.1, 0.4285623)
-		.rotate(90, -90, 180);
+		.scale(351/706, 1, 1)
+		.rotate(0, 180, 0);	
 		
-	wrap(plane("11"))
+	wrap(plane("yup11"))
 		.texture(baseUrl + "Yuppl/017Yuppl.png")
 		.parent(yupplParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(0.1, 0.1, 0.4285623)
-		.rotate(90, -90, 180);
+		.scale(362/701, 1, 1)
+		.rotate(0, 180, 0);	
 		
-	wrap(plane("12"))
+	wrap(plane("yup12"))
 		.texture(baseUrl + "Yuppl/018Yuppl.png")
 		.parent(yupplParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(0.1, 0.1, 0.4285623)
-		.rotate(90, -90, 180);
+		.scale(351/731, 1, 1)
+		.rotate(0, 180, 0);	
 		
-	wrap(plane("13"))
+	wrap(plane("yup13"))
 		.texture(baseUrl + "Yuppl/019Yuppl.png")
-		.parent(yupplParent)
+		.parent(headerParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(0.1, 0.1, 0.4285623)
-		.rotate(90, -90, 180);
+		.scale(1, 105/962, 105/962)
+		.rotate(0, 180, 0);	
 		
-	wrap(plane("14"))
+	wrap(plane("yu14"))
 		.texture(baseUrl + "Yuppl/020Yuppl.png")
 		.parent(yupplParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(0.1, 0.1, 0.4285623)
-		.rotate(90, -90, 180);	
+		.scale(1, 681/942, 681/942)
+		.rotate(0, 180, 0);	
+		
+	positionInLine(yupplParent, 10);
+	positionInLine(headerParent, 20);
 	
 	//MiniDevs Wall
 	var minidevs = empty();
@@ -298,55 +307,55 @@ function start(){
 	
 	var mdUrl = baseUrl + "/MiniDevs/";
 	
-	wrap(plane("1"))
+	wrap(plane("md1"))
 		.texture(mdUrl + "Another3DScanMinidev.png")
 		.parent(images)
 		.move(0, 0, -8.7);
-	wrap(plane("1"))
+	wrap(plane("md2"))
 		.texture(mdUrl + "brainstorming.png")
 		.parent(images)
 		.move(-18.5, 0, -0.2);
-	wrap(plane("1"))
+	wrap(plane("md3"))
 		.texture(mdUrl + "jimstart.png")
 		.parent(images)
 		.move(-12.8, 0, -10.9);
-	wrap(plane("1"))
+	wrap(plane("md4"))
 		.texture(mdUrl + "maherascanned.png")
 		.parent(images)
 		.move(-30.3, 0, -1.7);
-	wrap(plane("1"))
+	wrap(plane("md5"))
 		.texture(mdUrl + "MarianneVPMiniDevQuote.png")
 		.parent(images)
 		.move(-26.1, 0, -13.3);
-	wrap(plane("1"))
+	wrap(plane("md6"))
 		.texture(mdUrl + "MinidevPresentsXMAS.png")
 		.parent(images)
 		.move(30.76, 0, -1.03);
-	wrap(plane("1"))
+	wrap(plane("md7"))
 		.texture(mdUrl + "minidevsandmodels.png")
 		.parent(images)
 		.move(24.9, 0, -12.7);
-	wrap(plane("1"))
+	wrap(plane("md8"))
 		.texture(mdUrl + "MiniDevsGroupPhoto.png")
 		.parent(images)
 		.move(24.2, 0, 11.2);
-	wrap(plane("1"))
+	wrap(plane("md9"))
 		.texture(mdUrl + "MinidevWrapupTweet.png")
 		.parent(images)
 		.move(-13, 0, 11.1);
-	wrap(plane("1"))
+	wrap(plane("md10"))
 		.texture(mdUrl + "NewlandsKidsIdeas.png")
 		.parent(images)
 		.move(12.5, 0, 11.5);
-	wrap(plane("1"))
+	wrap(plane("md11"))
 		.texture(mdUrl + "sushi.png")
 		.parent(images)
 		.move(0, 0, 9.3);
-	wrap(plane("1"))
+	wrap(plane("md12"))
 		.texture(mdUrl + "TimDemoProjectR.png")
 		.parent(images)
 		.move(12.5, 0, -11.4);
-	wrap(plane("1"))
+	wrap(plane("md13"))
 		.texture(mdUrl + "TimInMR.png")
 		.parent(images)
 		.move(18.7, 0, 0);
