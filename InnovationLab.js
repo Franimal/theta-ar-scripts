@@ -93,7 +93,7 @@ function start(){
 		.scale(2, 2, 2)
 		.rotate(0, 0, -36);		
 		
-	move(veracidataParent, 9, 0, 13.64);
+	move(veracidataParent, 15, 0, 13.64);
 	rotate(veracidataParent, 0, 92.705, 0);
 			
 	wrap(plane("VERACIDATA"))
@@ -105,7 +105,8 @@ function start(){
 		.color(200/255, 200/255, 200/255, 1);
 			
 	//SIX DEGREES
-	wrap(cylinder("table"))
+	var table = cylinder("table");
+	wrap(table)
 		.move(-10, -1.733, 10)
 		.scale(2.6628, 0.2877, 2.662839);
 		
@@ -130,6 +131,37 @@ function start(){
 		.instruction(orbitHorizontal("a", 2, 3, function(){}));
 		
 	setRenderQueue(orbiter, 3001);
+	
+	wrap(plane("1"))
+		.texture(baseUrl + "sixdegrees/021SixDegrees.png")
+		.parent(table)
+		.move(-1.1, 16.79, 0)
+		.scale(0.1, 0.1, 0.1)
+		.rotate(-232, 123, 2.5399);		
+	wrap(plane("1"))
+		.texture(baseUrl + "sixdegrees/022SixDegrees.png")
+		.parent(table)
+		.move(0, 3.68, 0.641)
+		.scale(0.06518391, 0.1, 0.1)
+		.rotate(90, 180, 38.77);		
+	wrap(plane("1"))
+		.texture(baseUrl + "sixdegrees/023SixDegrees.png")
+		.parent(table)
+		.move(-0.588, 3.56, 0.204)
+		.scale(0.04802127, 0.1, 0.1)
+		.rotate(-270, 180, 65.755);		
+	wrap(plane("1"))
+		.texture(baseUrl + "sixdegrees/024SixDegrees.png")
+		.parent(table)
+		.move(-0.016, 6.84, 0.822)
+		.scale(0.0985442, 0.1, 0.4714607)
+		.rotate(90, 0, -142.451);		
+	wrap(plane("1"))
+		.texture(baseUrl + "sixdegrees/025SixDegrees.png")
+		.parent(table)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);	
 
 	//MIXED REALITY
 	
@@ -139,6 +171,110 @@ function start(){
 	
 	//YUPPL	
 	//main green color: #1ab394
+	var yupplParent = empty();
+	wrap(yupplParent).parent(yupplParent).rotate(-90, 180, 0).scale(0.1, 0.1, 0.1);				
+		
+	wrap(text("Yuppl"))
+		.scale(1, 1, 1)
+		.color(26/255, 179/255, 148/255, 1);
+		
+	wrap(plane("1"))
+		.texture(baseUrl + "Yuppl/007Yuppl.png")
+		.parent(yupplParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);	
+		
+	wrap(plane("2"))
+		.texture(baseUrl + "Yuppl/008Yuppl.png")
+		.parent(yupplParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);
+		
+	wrap(plane("3"))
+		.texture(baseUrl + "Yuppl/009Yuppl.png")
+		.parent(yupplParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);
+		
+	wrap(plane("4"))
+		.texture(baseUrl + "Yuppl/010Yuppl.png")
+		.parent(yupplParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);
+		
+	wrap(plane("5"))
+		.texture(baseUrl + "Yuppl/011Yuppl.png")
+		.parent(yupplParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);wrap(plane("1"))
+
+	wrap(plane("6"))
+		.texture(baseUrl + "Yuppl/012Yuppl.png")
+		.parent(yupplParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);
+		
+	wrap(plane("7"))
+		.texture(baseUrl + "Yuppl/013Yuppl.png")
+		.parent(yupplParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);
+		
+	wrap(plane("8"))
+		.texture(baseUrl + "Yuppl/014Yuppl.png")
+		.parent(yupplParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);
+		
+	wrap(plane("9"))
+		.texture(baseUrl + "Yuppl/015Yuppl.png")
+		.parent(yupplParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);
+		
+	wrap(plane("10"))
+		.texture(baseUrl + "Yuppl/016Yuppl.png")
+		.parent(yupplParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);
+		
+	wrap(plane("11"))
+		.texture(baseUrl + "Yuppl/017Yuppl.png")
+		.parent(yupplParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);
+		
+	wrap(plane("12"))
+		.texture(baseUrl + "Yuppl/018Yuppl.png")
+		.parent(yupplParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);
+		
+	wrap(plane("13"))
+		.texture(baseUrl + "Yuppl/019Yuppl.png")
+		.parent(yupplParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);
+		
+	wrap(plane("14"))
+		.texture(baseUrl + "Yuppl/020Yuppl.png")
+		.parent(yupplParent)
+		.move(-0.412, 7.48, -0.164)
+		.scale(0.1, 0.1, 0.4285623)
+		.rotate(90, -90, 180);	
 	
 	//MiniDevs Wall
 	var minidevs = empty();
