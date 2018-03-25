@@ -165,43 +165,68 @@ function start(){
 
 	//MIXED REALITY
 	var mrParent = empty();
-	wrap(mrParent).rotate(-90, 0, 0).scale(0.1, 0.1, 0.1);
+	wrap(mrParent).rotate(-90, 180, 0).scale(0.08, 0.15, 0.08).move(0, 0, -3.5);
 	
 	wrap(plane("mr1"))
 		.texture(baseUrl + "MR/2017-07-01-Kapiti.png")
-		.parent(pggwParent)
-		.move(0, 0, 0)
+		.parent(mrParent)
+		.move(8.25, -4.41, 0)
 		.scale(1, 1, 1)
 		.rotate(0, 180, 0);	
 		
 	wrap(plane("mr2"))
 		.texture(baseUrl + "MR/2017-08-22-AnnualReport.png")
-		.parent(pggwParent)
-		.move(0, 0, 0)
+		.parent(mrParent)
+		.move(-11.06, -13.53, 0)
 		.scale(1, 1, 1)
 		.rotate(0, 180, 0);	
 		
 	wrap(plane("mr3"))
 		.texture(baseUrl + "MR/2017-08-22-AnnualReport.png")
-		.parent(pggwParent)
-		.move(0, 0, 0)
+		.parent(mrParent)
+		.move(9.88, -25, 0)
 		.scale(1, 1, 1)
 		.rotate(0, 180, 0);	
 		
 	wrap(plane("mr4"))
 		.texture(baseUrl + "MR/2017-08-27-ProjectR.png")
-		.parent(pggwParent)
-		.move(0, 0, 0)
+		.parent(mrParent)
+		.move(-11.6, -37.2, 0)
 		.scale(1, 1, 1)
 		.rotate(0, 180, 0);	
 		
-	wrap(plane("mr1"))
+	wrap(plane("mr5"))
 		.texture(baseUrl + "MR/JimAndTimholoLensProjectR.png")
-		.parent(pggwParent)
-		.move(0, 0, 0)
+		.parent(mrParent)
+		.move(8.6, -49.3, 0)
 		.scale(1, 1, 1)
-		.rotate(0, 180, 0);		
+		.rotate(0, 180, 0);	
+		
 	//INTERNS
+	var internParent = empty();
+	wrap(internParent).rotate(-90, 0, 0).scale(0.1, 0.1, 0.1).move(0, 0, 20);
+	
+	wrap(plane("inter1"))
+		.texture(baseUrl + "interns/2018-02-04-InternReportBack.png")
+		.parent(internParent)
+		.move(-14.3, 30.99, -12.46)
+		.scale(1.624, 0.465, 1.624)
+		.rotate(-17.725, 180, 0);	
+		
+	wrap(plane("inter2"))
+		.texture(baseUrl + "interns/AucklandUniversity.png")
+		.parent(internParent)
+		.move(-14.3, 30.99, -12.46)
+		.scale(1.624, 0.465, 1.624)
+		.rotate(-17.725, 180, 0);	
+		
+	wrap(plane("inter3"))
+		.texture(baseUrl + "interns/interns-start.png")
+		.parent(internParent)
+		.parent(internParent)
+		.move(-14.3, 30.99, -12.46)
+		.scale(1.624, 0.465, 1.624)
+		.rotate(-17.725, 180, 0);	
 	
 	//CRAIGS
 	
