@@ -140,16 +140,16 @@ function start(){
 		.rotate(-232, 123, 2.5399);		
 	wrap(plane("sd2"))
 		.texture(baseUrl + "sixdegrees/022SixDegrees.png")
-		.parent(table)
-		.move(0, 3.68, 0.641)
+		.parent(table)		
+		.move(-0.588, 3.56, 0.204)
 		.scale(0.06518391, 0.1, 0.1)
-		.rotate(90, 180, 38.77);		
+		.rotate(-270, 180, 65.755);			
 	wrap(plane("sd3"))
 		.texture(baseUrl + "sixdegrees/023SixDegrees.png")
 		.parent(table)
-		.move(-0.588, 3.56, 0.204)
+		.move(0, 3.68, 0.641)
 		.scale(0.04802127, 0.1, 0.1)
-		.rotate(-270, 180, 65.755);		
+		.rotate(90, 180, 38.77);			
 	wrap(plane("sd4"))
 		.texture(baseUrl + "sixdegrees/024SixDegrees.png")
 		.parent(table)
@@ -164,147 +164,198 @@ function start(){
 		.rotate(90, -90, 180);	
 
 	//MIXED REALITY
+	var mrParent = empty();
+	wrap(mrParent).rotate(-90, 0, 0).scale(0.1, 0.1, 0.1);
 	
+	wrap(plane("mr1"))
+		.texture(baseUrl + "MR/2017-07-01-Kapiti.png")
+		.parent(pggwParent)
+		.move(0, 0, 0)
+		.scale(1, 1, 1)
+		.rotate(0, 180, 0);	
+		
+	wrap(plane("mr2"))
+		.texture(baseUrl + "MR/2017-08-22-AnnualReport.png")
+		.parent(pggwParent)
+		.move(0, 0, 0)
+		.scale(1, 1, 1)
+		.rotate(0, 180, 0);	
+		
+	wrap(plane("mr3"))
+		.texture(baseUrl + "MR/2017-08-22-AnnualReport.png")
+		.parent(pggwParent)
+		.move(0, 0, 0)
+		.scale(1, 1, 1)
+		.rotate(0, 180, 0);	
+		
+	wrap(plane("mr4"))
+		.texture(baseUrl + "MR/2017-08-27-ProjectR.png")
+		.parent(pggwParent)
+		.move(0, 0, 0)
+		.scale(1, 1, 1)
+		.rotate(0, 180, 0);	
+		
+	wrap(plane("mr1"))
+		.texture(baseUrl + "MR/JimAndTimholoLensProjectR.png")
+		.parent(pggwParent)
+		.move(0, 0, 0)
+		.scale(1, 1, 1)
+		.rotate(0, 180, 0);		
 	//INTERNS
 	
 	//CRAIGS
 	
 	//PGGW
 	var pggwParent = empty();
-	wrap(pggwParent).rotate(-90, 0, 90).scale(0.1, 0.1, 0.1).move(17.02, 0, 34.51);	
+	wrap(pggwParent).rotate(-90, 0, 0).scale(0.1, 0.1, 0.1).move(6.5, 0, 37);	
 	
 	wrap(plane("pgg1"))
 		.texture(baseUrl + "pggw/026PGGWrightsonLogo.jpg")
 		.parent(pggwParent)
-		.move(-0.412, 7.48, -0.164)
-		.scale(1, 209/730,  1)
-		.rotate(0, 180, 0);	
+		.move(-14.3, 30.99, -12.46)
+		.scale(1.624, 0.465, 1.624)
+		.rotate(-17.725, 180, 0);	
+		
+	var frameworkParent = empty();
+	wrap(frameworkParent).parent(pggwParent).scale(0.5, 0.5, 0.5).move(-59.1, 19.9, -13.53);
 		
 	wrap(plane("pgg2"))
 		.texture(baseUrl + "pggw/028PGGWrightsonPowerAppsLogo.png")
-		.parent(pggwParent)
+		.parent(frameworkParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(1, 508/600,  1)
-		.rotate(0, 180, 0);	
+		.scale(1.48, 1.259, 1.487)
+		.rotate(0, 180, 14.844);	
 		
 	wrap(plane("pgg3"))
 		.texture(baseUrl + "pggw/029powerapps.png")
-		.parent(pggwParent)
+		.parent(frameworkParent)
 		.move(-0.412, 7.48, -0.164)
-		.scale(1, 648/1000,  1)
-		.rotate(0, 180, 0);	
+		.scale(1.487, 0.9636288, 1.487082)
+		.rotate(0, 180, 14.844);	
 		
 	wrap(plane("pgg4"))
 		.texture(baseUrl + "pggw/030MicrosoftFlow.jpg")
-		.parent(pggwParent)
+		.parent(frameworkParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 250/424,  1)
 		.rotate(0, 180, 0);	
 		
 	wrap(plane("pgg5"))
 		.texture(baseUrl + "pggw/031Abbildung_Flow.png")
-		.parent(pggwParent)
+		.parent(frameworkParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 325/580,  1)
 		.rotate(0, 180, 0);	
 
 	wrap(plane("pgg6"))
 		.texture(baseUrl + "pggw/032BotFramework.png")
-		.parent(pggwParent)
+		.parent(frameworkParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 1,  1)
 		.rotate(0, 180, 0);		
 		
 	wrap(plane("pgg7"))
 		.texture(baseUrl + "pggw/033BotFramework.png")
-		.parent(pggwParent)
+		.parent(frameworkParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 461/860,  1)
-		.rotate(0, 180, 0);		
+		.rotate(0, 180, 0);
 		
 	wrap(plane("pgg8"))
 		.texture(baseUrl + "pggw/034luis_with_microsoft_bot_framework_logo.png")
-		.parent(pggwParent)
+		.parent(frameworkParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 510/825,  1)
-		.rotate(0, 180, 0);
+		.rotate(0, 180, 0);		
+		
+	positionInLine(frameworkParent, 10);
+		
+	var newTechParent = empty();
+	wrap(newTechParent).parent(pggwParent).scale(0.5, 0.5, 0.5).move(-2.29, 26.95, -9.64);
 		
 	wrap(plane("pgg9"))
 		.texture(baseUrl + "pggw/035wearables-e1455299947895.jpg")
-		.parent(pggwParent)
+		.parent(newTechParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 353/730,  1)
 		.rotate(0, 180, 0);
 		
 	wrap(plane("pgg10"))
 		.texture(baseUrl + "pggw/036wearables5872-b3a7e62784a7ccd71650ab36a3ef27a7.jpg")
-		.parent(pggwParent)
+		.parent(newTechParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 660/1180,  1)
 		.rotate(0, 180, 0);		
 		
 	wrap(plane("pgg11"))
 		.texture(baseUrl + "pggw/037john-howard-loook-inc-uxui-design-for-vr-and-mixed-reality-28-638.jpg")
-		.parent(pggwParent)
+		.parent(newTechParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 493/638,  1)
 		.rotate(0, 180, 0);				
 		
 	wrap(plane("pgg12"))
 		.texture(baseUrl + "pggw/038smart-farming-1-500x383.jpg")
-		.parent(pggwParent)
+		.parent(newTechParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 383/500,  1)
 		.rotate(0, 180, 0);
 
+	positionInLine(newTechParent, 10);
+	
+	var slideParent = empty();
+	wrap(slideParent).parent(pggwParent).scale(0.5, 0.5, 0.5).move(-34.87, 22.1, -0.44);	
+		
 	wrap(plane("pgg13"))
 		.texture(baseUrl + "pggw/039plants-health.png")
-		.parent(pggwParent)
+		.parent(slideParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 499/800,  1)
 		.rotate(0, 180, 0);
 
 	wrap(plane("pgg14"))
 		.texture(baseUrl + "pggw/slide001.png")
-		.parent(pggwParent)
+		.parent(slideParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 720/1280,  1)
 		.rotate(0, 180, 0);
 		
 	wrap(plane("pgg14"))
 		.texture(baseUrl + "pggw/slide002.png")
-		.parent(pggwParent)
+		.parent(slideParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 720/1280,  1)
 		.rotate(0, 180, 0);
 		
 	wrap(plane("pgg14"))
 		.texture(baseUrl + "pggw/slide003.png")
-		.parent(pggwParent)
+		.parent(slideParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 720/1280,  1)
 		.rotate(0, 180, 0);
 		
 	wrap(plane("pgg14"))
 		.texture(baseUrl + "pggw/slide004.png")
-		.parent(pggwParent)
+		.parent(slideParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 720/1280,  1)
 		.rotate(0, 180, 0);
 		
 	wrap(plane("pgg14"))
 		.texture(baseUrl + "pggw/slide005.png")
-		.parent(pggwParent)
+		.parent(slideParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 720/1280,  1)
 		.rotate(0, 180, 0);
 		
 	wrap(plane("pgg14"))
 		.texture(baseUrl + "pggw/slide006.png")
-		.parent(pggwParent)
+		.parent(slideParent)
 		.move(-0.412, 7.48, -0.164)
 		.scale(1, 720/1280,  1)
 		.rotate(0, 180, 0);
+		
+		positionInLine(slideParent, 10);
 		
 	//YUPPL	
 	//main green color: #1ab394
