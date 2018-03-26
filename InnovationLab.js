@@ -1,6 +1,7 @@
 function setup(){
 	loadAssetFromUrl("https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/Models/lightsaber/scene.gltf", "lightsaber");	
-	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/flower_pot_with_succulent_plants/scene.gltf", "potted_succulent");	
+	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/plant/scene.gltf", "plant");	
+	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/plant__rosa_chinensis/scene.gltf", "rosa");	
 }
 
 function setKey(keyName, keyValue) {
@@ -29,7 +30,18 @@ function start(){
 			.emit(0, 1, 1, 1);	
 	}
 	
-	createItem("potted_succulent");
+	var plant = createItem("plant");
+	var rosa = createItem("rosa");
+	
+	wrap(rosa)
+		.move(1.41, -2.79, 12.008)
+		.rotate(0, 0, 0)
+		.scale(0.3, 0.3, 0.3);
+		
+	wrap(plant)
+		.move(-11.7, -2.043, 5.75)
+		.rotate(0, 0, 0)
+		.scale(1, 1, 1);
 	
 	//VERACIDATA	
 	var veracidataParent = empty();
