@@ -2,6 +2,14 @@ function setup(){
 	loadAssetFromUrl("https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/Models/lightsaber/scene.gltf", "lightsaber");	
 	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/plant/scene.gltf", "plant");	
 	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/plant__rosa_chinensis/scene.gltf", "rosa");	
+	
+	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/free_hololens_model__textures/scene.gltf", "hololens");	
+	
+	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/basic_chair/scene.gltf", "chair");
+
+	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/giant_low_poly_tree/scene.gltf", "lowpolytree");
+
+	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/musa_french_sombre/scene.gltf", "sombre");		
 }
 
 function setKey(keyName, keyValue) {
@@ -32,6 +40,26 @@ function start(){
 	
 	var plant = createItem("plant");
 	var rosa = createItem("rosa");
+	var hololens = createItem("hololens");
+	
+	wrap(hololens).move(5.08, 0, 4.94).rotate(0, 146, 0).scale(0.02, 0.02, 0.02);
+	
+	var chair1 = createItem("chair");
+	wrap(chair1).move(-8.645, -1.98, 12.04).rotate(0, 177, 0).scale(0.002, 0.002, 0.002);
+	var chair2 = createItem("chair");
+	wrap(chair2).move(-7.87, -1.98, 13.85).rotate(0, -125.696, 0).scale(0.002, 0.002, 0.002);
+	var chair3 = createItem("chair");
+	wrap(chair3).move(-1.9, -2.01, 22.55).rotate(0, -170, 0).scale(0.002, 0.002, 0.002);
+	var chair4 = createItem("chair");
+	wrap(chair4).move(-3.23, -2, 22.5).rotate(0, 0, 0).scale(0.002, 0.002, 0.002);
+	var chair5 = createItem("chair");
+	wrap(chair5).move(0.94, 0, 7.567).rotate(0, 0, 0).scale(0.002, 0.002, 0.002);
+	
+	var tree = createItem("lowpolytree");
+	wrap(tree).move(0.94, -2.136, 12.43).rotate(0, 0, 0).scale(0.08, 0.08, 0.08);
+	
+	var sombre = createItem("sombre");
+	wrap(sombre).move(7.69, -2, 18.55).rotate(0, 0, 0).scale(1, 1, 1);
 	
 	wrap(rosa)
 		.move(1.41, -2.79, 12.008)
@@ -254,6 +282,9 @@ function start(){
 		.rotate(0, 180, 0);	
 	
 	//CRAIGS
+	var craigs = wrap(empty()).move(0, 0, 0).rotate(0, 0, 0).scale(0, 0, 0);
+	wrap(text("Tauranga Hackathon: data science for financial portfolios")).parent(craigs).move(0, 0, 0).rotate(0, 0, 0).scale(0, 0, 0);
+	
 	
 	//PGGW
 	var pggwParent = empty();
@@ -597,6 +628,8 @@ function start(){
 		.texture(mdUrl + "TimInMR.png")
 		.parent(images)
 		.move(18.7, 0, 0);
+		
+	
 }
 
 var recording = false;
