@@ -7,6 +7,8 @@ Note: To follow along with this tutorial, you need to have the appropriate appli
 Create a text file in the same folder as your application.
 Open this file, and "Save-as" - call is "Tutorial.js"
 
+TODO:[Screengrab of the .js file next to the .exe file]
+
 **Add the basics**
 
 Copy and paste the following into the file:
