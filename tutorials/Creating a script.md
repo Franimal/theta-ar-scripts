@@ -27,11 +27,11 @@ function update(){
 
 This is the basic shell of a script.  You'll notice there are three different things in here - setup, start and update.  
 
-setup is where you put things that you want to happen before your script starts running at all.  This includes things like download images or models that you want to be available as soon as you run your script.
+-setup is where you put things that you want to happen before your script starts running at all.  This includes things like download images or models that you want to be available as soon as you run your script.
 
-start is what happens as soon as your script starts running - after your things in setup have loaded.
+-start is what happens as soon as your script starts running - after your things in setup have loaded.
 
-update happens at every frame - every game step.  For example, if you tell an object to move a little bit inside of update, it will do so at every gamestep, and move continuously.
+-update happens at every frame - every game step.  For example, if you tell an object to move a little bit inside of update, it will do so at every gamestep, and move continuously.
 
 **Hello, World**
 
