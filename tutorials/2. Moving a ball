@@ -1,0 +1,78 @@
+In this tutorial we'll create a ball, change its color, and make it move.
+
+We'll be starting with the basic script shell again:
+
+```javascript
+function setup(){
+
+}
+
+function start(){
+
+}
+
+function update(){
+
+}
+```
+
+**Creating a sphere**
+
+To create the sphere, we can simply write this:
+
+```sphere("a sphere");```
+
+This will create a sphere where the user is standing, with the name "a sphere".
+
+We'll want to be able to use the sphere later, so we need to keep a reference to it.  To do this we create a variable (var for short), and
+tell it to store our ball.  We can call this whatever we want, but we'll call it 'ball'.
+
+```javascript
+function setup(){
+
+}
+
+function start(){
+  var ball = sphere("a sphere");
+}
+
+function update(){
+
+}
+```
+
+**Moving the sphere in front of us**
+
+Creating a sphere on top of us isn't ideal, as we won't be able to see it.  To move it in front of us, we need to do the following:
+
+```javascript
+function setup(){
+
+}
+
+function start(){
+  var ball = sphere("a sphere");
+  wrap(ball).move(0, 0, 2);
+}
+
+function update(){
+
+}
+```
+
+There are a few things to talk about here.  First, you'll notice we have wrapped the ball with ```wrap(ball)``.  This attaches a controller
+to our ball that allows us to do things like move it and change its color.  
+
+Here, we have moved it forward 2 meters.  There are three numbers that we give to move, and they are the x, y and z directions - left to right, 
+down to up, and back to front, ```move(0, 0, 2)```, so we have moved it 0 meters across and up, and 2 meters in front.
+
+Here is a list of some of the things we can to do our wrapper ball:
+```javascript
+.move(x, y, z)                      Moves the object along the x, y and z axes
+.rotate(x, y, z)                    Rotates the object around the x, y and z axes
+.scale(x, y, z)                     Scales/resizes the object in the x, y and z directions
+.color(red, green, blue, alpha)     Changes the color of the object to the specified red, green, blue and alpha values - values are from 0 to 1 
+.emit(red, green, blue, alpha)      Changes the emission/glow color of the object to the specified red, green, blue and alpha values - values are from 0 to 1
+.texture(imageUrl)                  Changes the textures of the object to the image from the URL
+.parent(object)                     Sets the parent of the object to the given object.  This means that if the parent moves, rotates or scales the child wil also move, rotate or scale.
+```
