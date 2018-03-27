@@ -53,16 +53,16 @@ function start(){
 	var chair4 = createItem("chair");
 	wrap(chair4).move(-3.23, -2, 22.5).rotate(0, 0, 0).scale(0.002, 0.002, 0.002);
 	var chair5 = createItem("chair");
-	wrap(chair5).move(0.94, 0, 7.567).rotate(0, 0, 0).scale(0.002, 0.002, 0.002);
+	wrap(chair5).move(12.78, -2.08, 9.53).rotate(0, 0, 0).scale(0.002, 0.002, 0.002);
 	
 	var tree = createItem("lowpolytree");
-	wrap(tree).move(0.94, -2.136, 12.43).rotate(0, 0, 0).scale(0.08, 0.08, 0.08);
+	wrap(tree).move(0.94, -2.136, 15.46).rotate(0, 0, 0).scale(0.08, 0.08, 0.08);
 	
 	var sombre = createItem("sombre");
-	wrap(sombre).move(7.69, -2, 18.55).rotate(0, 0, 0).scale(1, 1, 1);
+	wrap(sombre).move(3.44, -2, 21.3).rotate(0, 0, 0).scale(1, 1, 1);
 	
 	wrap(rosa)
-		.move(1.41, -2.79, 12.008)
+		.move(1.45, -2.79, 18.49)
 		.rotate(0, 0, 0)
 		.scale(0.3, 0.3, 0.3);
 		
@@ -255,6 +255,9 @@ function start(){
 	var internParent = empty();
 	wrap(internParent).rotate(-90, 0, -33.27).scale(0.1, 0.1, 0.1).move(-7.82, 0, 38.45);
 	
+	wrap(text("Type")).parent(internParent).move(-17.27, 31.01, -17.88).rotate(90, 0, 0).scale(8, 8, 8).color(1, 1, 1, 1);
+	wrap(text("Mine")).parent(internParent).move(-11.86, 31, -17.96).rotate(90, 0, 0).scale(8, 8, 8).color(0.2, 0.2, 0.53, 1);
+	
 	wrap(plane("internbg")).texture("http://www.solidbackgrounds.com/images/1920x1080/1920x1080-white-solid-color-background.jpg")
 		.parent(internParent).color(56/255, 66/255, 75/255, 1)
 		.move(-13.2, 30.65, -5.9).rotate(0, 0, 0).scale(3.597712, 1, 2.818548);
@@ -282,10 +285,40 @@ function start(){
 		.rotate(0, 180, 0);	
 	
 	//CRAIGS
-	var craigs = wrap(empty()).move(0, 0, 0).rotate(0, 0, 0).scale(0, 0, 0);
-	wrap(text("Tauranga Hackathon: data science for financial portfolios")).parent(craigs).move(0, 0, 0).rotate(0, 0, 0).scale(0, 0, 0);
+	var craigs = empty();
 	
+	wrap(craigs).move(-13.59, 0, -0.51).rotate(0, -85.312, 0).scale(1, 1, 1);
 	
+	wrap(text("Tauranga Hackathon: data science for financial portfolios")).parent(craigs).move(0, -1.839, -1.013).rotate(0, 0, 0).scale(0.5, 0.5, 0.5);	
+		
+	wrap(plane("craig1"))
+		.texture(baseUrl + "craigs/fancygraph.png")
+		.parent(craigs)
+		.move(0.0089999, -1.155, -1.029)
+		.scale(0.1, 0.1, 0.1)
+		.rotate(90, 180, 0.50898);	
+
+	wrap(plane("craig1"))
+		.texture(baseUrl + "craigs/fancyheader.png")
+		.parent(craigs)
+		.move(0.0089999, -0.152, -1.029)
+		.scale(0.1, 0.1, 0.1)
+		.rotate(90, 180, 0.5089874);	
+		
+	wrap(plane("craig1"))
+		.texture(baseUrl + "craigs/keypeople.png")
+		.parent(craigs)
+		.move(-0.992, -0.1459999, -1.038)
+		.scale(0.1, 0.1, 0.1)
+		.rotate(90, 180, 0.5089874);
+		
+	wrap(plane("craig1"))
+		.texture(baseUrl + "craigs/working.png")
+		.parent(craigs)
+		.move(-0.997, -1.155, -1.038)
+		.scale(0.1, 0.1, 0.1)
+		.rotate(90, 180, 0.5089874);
+		
 	//PGGW
 	var pggwParent = empty();
 	wrap(pggwParent).rotate(-90, 0, 0).scale(0.1, 0.1, 0.1).move(6.5, 0, 37);	
