@@ -11,7 +11,7 @@ Open this file, and "Save-as" - call is "Tutorial.js"
 
 Copy and paste the following into the file:
 
-`
+```
 function setup(){
 
 }
@@ -23,7 +23,7 @@ function start(){
 function update(){
 
 }
-`
+```
 
 This is the basic shell of a script.  You'll notice there are three different things in here - setup, start and update.  
 
@@ -39,7 +39,7 @@ To make sure our script is hooked up and working, we are going to add some simpl
 
 In start, we are going to turn on the log, that we can write messages to and also use to see if there is anything going wrong.  We will also write a message, to show us that everything is set up correctly.  The lines added are highlighted below.
 
-`
+```
 function setup(){
 
 }
@@ -52,7 +52,7 @@ function start(){
 function update(){
 
 }
-`
+```
 
 **Testing**
 
