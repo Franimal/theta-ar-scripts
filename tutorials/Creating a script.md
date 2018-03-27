@@ -51,8 +51,8 @@ function setup(){
 }
 
 function start(){
-  **showLog();**
-  **log("Hello, world!");**
+  <b>showLog();</b>
+  <b>log("Hello, world!");</b>
 }
 
 function update(){
