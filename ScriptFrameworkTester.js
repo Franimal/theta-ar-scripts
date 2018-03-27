@@ -2,16 +2,6 @@ function setup(){
 	loadAssetFromUrl("https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/Models/lightsaber/scene.gltf", "lightsaber");
 }
 
-function setKey(keyName, keyValue) {
-	return function(instructionComponent) {
-		if (!instructionComponent.state) {
-			instructionComponent.state = {};
-		}
-		
-		instructionComponent.state[keyName] = keyValue;
-	}
-}
-
 var saberHilt = null;
 var saberBlade = null;
 
