@@ -45,7 +45,7 @@ To make sure our script is hooked up and working, we are going to add some simpl
 
 In start, we are going to turn on the log, which we can write messages to and also use to see if there is anything going wrong.  We will also write a message, to show us that everything is set up correctly.  The lines added are highlighted in bold below.
 
-```javascript
+<pre lang="javascript">
 function setup(){
 
 }
@@ -58,7 +58,7 @@ function start(){
 function update(){
 
 }
-```
+</pre>
 
 **Testing**
 
