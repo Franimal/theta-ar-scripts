@@ -2,7 +2,7 @@
 "IOS":[],
 "MR":[
 {
-	"filename":"local:../Tutorial.js",
+	"filename":"local:Tutorial.js",
 	"includes":["https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/lib/game-object-wrapper.js"],
 	"title":"Tutorial Script", 
 	"description":"A tutorial script.", 
