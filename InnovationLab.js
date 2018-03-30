@@ -27,6 +27,8 @@ var saberHilt = null;
 var baseUrl = "https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/";
 
 function start(){
+	
+	showLog();
 	//saberHilt = createItem("lightsaber");
 	//size(saberHilt, 0.3);	
 	//disable(saberHilt);		
