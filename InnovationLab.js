@@ -1,15 +1,15 @@
 function setup(){
-	loadAssetFromUrl("https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/Models/lightsaber/scene.gltf", "lightsaber");	
-	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/plant/scene.gltf", "plant");	
-	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/plant__rosa_chinensis/scene.gltf", "rosa");	
-	
-	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/free_hololens_model__textures/scene.gltf", "hololens");	
-	
-	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/basic_chair/scene.gltf", "chair");
-
-	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/giant_low_poly_tree/scene.gltf", "lowpolytree");
-
-	loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/musa_french_sombre/scene.gltf", "sombre");		
+	//loadAssetFromUrl("https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/Models/lightsaber/scene.gltf", "lightsaber");	
+	//loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/plant/scene.gltf", "plant");	
+	//loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/plant__rosa_chinensis/scene.gltf", "rosa");	
+	//
+	//loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/free_hololens_model__textures/scene.gltf", "hololens");	
+	//
+	//loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/basic_chair/scene.gltf", "chair");
+//
+	//loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/giant_low_poly_tree/scene.gltf", "lowpolytree");
+//
+	//loadAssetFromUrl("https://github.com/Franimal/theta-ar-scripts/raw/master/innovation-showcase/models/musa_french_sombre/scene.gltf", "sombre");		
 }
 
 function setKey(keyName, keyValue) {
@@ -38,39 +38,39 @@ function start(){
 			.emit(0, 1, 1, 1);	
 	}
 	
-	var plant = createItem("plant");
-	var rosa = createItem("rosa");
-	var hololens = createItem("hololens");
-	
-	wrap(hololens).move(5.08, 0, 4.94).rotate(0, 146, 0).scale(0.02, 0.02, 0.02);
-	
-	var chair1 = createItem("chair");
-	wrap(chair1).move(-8.645, -1.98, 12.04).rotate(0, 177, 0).scale(0.002, 0.002, 0.002);
-	var chair2 = createItem("chair");
-	wrap(chair2).move(-7.87, -1.98, 13.85).rotate(0, -125.696, 0).scale(0.002, 0.002, 0.002);
-	var chair3 = createItem("chair");
-	wrap(chair3).move(-1.9, -2.01, 22.55).rotate(0, -170, 0).scale(0.002, 0.002, 0.002);
-	var chair4 = createItem("chair");
-	wrap(chair4).move(-3.23, -2, 22.5).rotate(0, 0, 0).scale(0.002, 0.002, 0.002);
-	var chair5 = createItem("chair");
-	wrap(chair5).move(12.78, -2.08, 9.53).rotate(0, 0, 0).scale(0.002, 0.002, 0.002);
-	
-	var tree = createItem("lowpolytree");
-	wrap(tree).move(0.94, -2.136, 15.46).rotate(0, 0, 0).scale(0.08, 0.08, 0.08);
-	
-	var sombre = createItem("sombre");
-	wrap(sombre).move(3.44, -2, 21.3).rotate(0, 0, 0).scale(1, 1, 1);
-	
-	wrap(rosa)
-		.move(1.45, -2.79, 18.49)
-		.rotate(0, 0, 0)
-		.scale(0.3, 0.3, 0.3);
-		
-	wrap(plant)
-		.move(-11.7, -2.043, 5.75)
-		.rotate(0, 0, 0)
-		.scale(1, 1, 1);
-	
+	//var plant = createItem("plant");
+	//var rosa = createItem("rosa");
+	//var hololens = createItem("hololens");
+	//
+	//wrap(hololens).move(5.08, 0, 4.94).rotate(0, 146, 0).scale(0.02, 0.02, 0.02);
+	//
+	//var chair1 = createItem("chair");
+	//wrap(chair1).move(-8.645, -1.98, 12.04).rotate(0, 177, 0).scale(0.002, 0.002, 0.002);
+	//var chair2 = createItem("chair");
+	//wrap(chair2).move(-7.87, -1.98, 13.85).rotate(0, -125.696, 0).scale(0.002, 0.002, 0.002);
+	//var chair3 = createItem("chair");
+	//wrap(chair3).move(-1.9, -2.01, 22.55).rotate(0, -170, 0).scale(0.002, 0.002, 0.002);
+	//var chair4 = createItem("chair");
+	//wrap(chair4).move(-3.23, -2, 22.5).rotate(0, 0, 0).scale(0.002, 0.002, 0.002);
+	//var chair5 = createItem("chair");
+	//wrap(chair5).move(12.78, -2.08, 9.53).rotate(0, 0, 0).scale(0.002, 0.002, 0.002);
+	//
+	//var tree = createItem("lowpolytree");
+	//wrap(tree).move(0.94, -2.136, 15.46).rotate(0, 0, 0).scale(0.08, 0.08, 0.08);
+	//
+	//var sombre = createItem("sombre");
+	//wrap(sombre).move(3.44, -2, 21.3).rotate(0, 0, 0).scale(1, 1, 1);
+	//
+	//wrap(rosa)
+	//	.move(1.45, -2.79, 18.49)
+	//	.rotate(0, 0, 0)
+	//	.scale(0.3, 0.3, 0.3);
+	//	
+	//wrap(plant)
+	//	.move(-11.7, -2.043, 5.75)
+	//	.rotate(0, 0, 0)
+	//	.scale(1, 1, 1);
+	//
 	//VERACIDATA	
 	var veracidataParent = empty();
 	
