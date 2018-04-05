@@ -30,11 +30,11 @@ function executeState(){
 	if(state === 0){ //
 		firstImage = createItem("first");
 		
-		moveInFront(firstImage, 2.5);
+		moveInFront(firstImage, 1);
 		
 		wrap(firstImage)
 			.rotate(-90, 0, 0)
-			.scale(0.4, 0.01, 0.4)
+			.scale(0.2, 0.005, 0.2)
 			.move(0, -0.5, 0)
 			.state({
 				moveKey: 'a',
@@ -51,11 +51,11 @@ function executeState(){
 		destroy(firstImage);
 		secondImage = createItem("second");
 		
-		moveInFront(secondImage, 2.5);	
+		moveInFront(secondImage, 1);	
 		
 		wrap(secondImage)
 			.rotate(-90, 0, 0)
-			.scale(0.4, 0.01, 0.4)
+			.scale(0.2, 0.005, 0.2)
 			.move(0, -0.5, 0)
 			.state({
 				moveKey: 'a',
@@ -72,11 +72,11 @@ function executeState(){
 		destroy(secondImage);
 		thirdImage = createItem("third");
 		
-		moveInFront(thirdImage, 2.5);
+		moveInFront(thirdImage, 1);
 		
 		wrap(thirdImage)
 			.rotate(-90, 0, 0)
-			.scale(0.4, 0.01, 0.4)
+			.scale(0.2, 0.005, 0.2)
 			.move(0, -0.5, 0)
 			.state({
 				moveKey: 'a',
@@ -94,11 +94,11 @@ function executeState(){
 		
 		fourthImage = createItem("fourth");
 		
-		moveInFront(fourthImage, 2.5);			
+		moveInFront(fourthImage, 1);			
 		
 		wrap(fourthImage)
 			.rotate(-90, 0, 0)
-			.scale(0.8, 0.01, 0.4)
+			.scale(0.4, 0.005, 0.2)
 			.move(0, -0.5, 0)
 			.state({
 				moveKey: 'a',
