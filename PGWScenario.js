@@ -118,7 +118,7 @@ function executeState(){
 		
 		wrap(fifthImage)
 			.rotate(-90, 0, 0)
-			.scale(0.8, 0.01, 0.4)
+			.scale(0.4, 0.005, 0.2)
 			.move(0, 0, 0);
 			
 		fifthImage.transform.position = fourthImage.transform.position;
@@ -129,6 +129,7 @@ function executeState(){
 	
 	if(state === 5){ //
 		destroy(fifthImage);
+		state = -1;
 	}
 }
 
