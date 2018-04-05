@@ -63,15 +63,6 @@
 	"author":"You",
 	"version":"1.0",
 	"thumbnail":"https://www.theta.co.nz/images/thetaLogo_sm.png"
-},
-{
-	"filename":"https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/PGWScenario.js",
-	"includes":["https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/lib/game-object-wrapper.js"],
-	"title":"PGW Scenario", 
-	"description":"Scenario for PGW.", 
-	"author":"You",
-	"version":"1.0",
-	"thumbnail":"https://www.theta.co.nz/images/thetaLogo_sm.png"
 }
 ]
 }
