@@ -93,7 +93,7 @@ function executeState(){
 		destroy(thirdImage);
 		
 		fourthImage = createItem("fourth");
-		setCollider(fourthImage, false);
+		//setCollider(fourthImage, false);
 		moveInFront(fourthImage, 1);			
 		
 		wrap(fourthImage)
@@ -113,7 +113,7 @@ function executeState(){
 	
 	if(state === 4){ //		
 		fifthImage = createItem("fifth");
-		//setCollider(fifthImage, false);
+		setCollider(fifthImage, false);
 		moveInFront(fifthImage, 2.5);			
 		
 		wrap(fifthImage)
