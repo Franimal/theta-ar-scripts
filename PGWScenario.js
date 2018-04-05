@@ -1,7 +1,13 @@
 var state = -1;
 
+var baseUrl = "https://raw.githubusercontent.com/Franimal/theta-ar-scripts/master/IntelliAg_Pics/"
+
 function setup(){
-	
+	loadAssetFromUrl(baseUrl + "escolta.png", "first");
+	loadAssetFromUrl(baseUrl + "Plantafol.png", "second");
+	loadAssetFromUrl(baseUrl + "actiwet.png", "third");
+	loadAssetFromUrl(baseUrl + "CustomerQuote.png", "fourth");
+	loadAssetFromUrl(baseUrl + "QuoteConfirmed.png", "fifth");
 }
 
 function start(){
@@ -18,17 +24,18 @@ var thirdImage = null;
 
 var fourthImage = null;
 
+var fifthImage = null;
+
 function executeState(){
 	if(state === 0){ //
-		firstImage = plane("first");
+		firstImage = createItem("first");
 		
 		moveInFront(firstImage, 2.5);
 		
 		wrap(firstImage)
-			//.texture(baseUrl + "VeracidataLeft.png")
 			.rotate(-90, 0, 0)
-			.scale(0.04, 0.04, 0.04)
-			.move(-0.5, -0.5, 0)
+			.scale(0.4, 0.01, 0.4)
+			.move(0, -0.5, 0)
 			.state({
 				moveKey: 'a',
 				colorKey: 'a'
@@ -41,15 +48,15 @@ function executeState(){
 	}
 	
 	if(state === 1){ //
-		secondImage = plane("second");
+		destroy(firstImage);
+		secondImage = createItem("second");
 		
-		move(secondImage, pos(firstImage).x, pos(firstImage).y, pos(firstImage).z);		
+		moveInFront(secondImage, 2.5);	
 		
 		wrap(secondImage)
-			//.texture(baseUrl + "VeracidataLeft.png")
 			.rotate(-90, 0, 0)
-			.scale(0.04, 0.04, 0.04)
-			.move(0.5, -0.5, 0)
+			.scale(0.4, 0.01, 0.4)
+			.move(0, -0.5, 0)
 			.state({
 				moveKey: 'a',
 				colorKey: 'a'
@@ -62,15 +69,15 @@ function executeState(){
 	}
 	
 	if(state === 2){ //
-		thirdImage = plane("third");
+		destroy(secondImage);
+		thirdImage = createItem("third");
 		
-		move(thirdImage, pos(secondImage).x, pos(secondImage).y, pos(secondImage).z);
+		moveInFront(thirdImage, 2.5);
 		
 		wrap(thirdImage)
-			//.texture(baseUrl + "VeracidataLeft.png")
 			.rotate(-90, 0, 0)
-			.scale(0.04, 0.04, 0.04)
-			.move(0.5, -0.5, 0)
+			.scale(0.4, 0.01, 0.4)
+			.move(0, -0.5, 0)
 			.state({
 				moveKey: 'a',
 				colorKey: 'a'
@@ -83,18 +90,15 @@ function executeState(){
 	}
 	
 	if(state === 3){ //
-		destroy(firstImage);
-		destroy(secondImage);
 		destroy(thirdImage);
 		
-		fourthImage = plane("fourth");
+		fourthImage = createItem("fourth");
 		
 		moveInFront(fourthImage, 2.5);			
 		
 		wrap(fourthImage)
-			//.texture(baseUrl + "VeracidataLeft.png")
 			.rotate(-90, 0, 0)
-			.scale(0.08, 0.04, 0.04)
+			.scale(0.8, 0.01, 0.4)
 			.move(0, -0.5, 0)
 			.state({
 				moveKey: 'a',
@@ -107,12 +111,24 @@ function executeState(){
 			face(fourthImage, newVector(ourPosition().x, ourPosition().y-0.5, ourPosition().z));
 	}
 	
-	if(state === 4){ //
+	if(state === 4){ //				
+		fifthImage = createItem("fifth");
 		
+		moveInFront(fifthImage, 2.5);			
+		
+		wrap(fifthImage)
+			.rotate(-90, 0, 0)
+			.scale(0.8, 0.01, 0.4)
+			.move(0, 0, 0);
+			
+		fifthImage.transform.position = fourthImage.transform.position;
+		fifthImage.transform.rotation = fourthImage.transform.rotation;
+		
+		destroy(fourthImage);
 	}
 	
 	if(state === 5){ //
-		
+		destroy(fifthImage);
 	}
 }
 
