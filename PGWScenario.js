@@ -44,7 +44,7 @@ function executeState(){
 			.instruction(transitionColor("a", 1, 1, 1, 1, 1, setKey("colorKey", "b")));
 			//.instruction(transitionPos("a", pos(firstImage).x, pos(firstImage).y + 0.5, pos(firstImage).z, 1, setKey("moveKey", "b")));		
 			
-			face(firstImage, newVector(ourPosition().x, ourPosition().y-0.5, ourPosition().z));
+			face(firstImage, newVector(ourPosition().x, ourPosition().y, ourPosition().z));
 	}
 	
 	if(state === 1){ //
@@ -65,7 +65,7 @@ function executeState(){
 			.instruction(transitionColor("a", 1, 1, 1, 1, 1, setKey("colorKey", "a")));
 			//.instruction(transitionPos("a", pos(secondImage).x, pos(secondImage).y + 0.5, pos(secondImage).z, 1, setKey("moveKey", "b")));	
 			
-			face(secondImage, newVector(ourPosition().x, ourPosition().y-0.5, ourPosition().z));
+			face(secondImage, newVector(ourPosition().x, ourPosition().y, ourPosition().z));
 	}
 	
 	if(state === 2){ //
@@ -86,7 +86,7 @@ function executeState(){
 			.instruction(transitionColor("a", 1, 1, 1, 1, 1, setKey("colorKey", "a")));
 			//.instruction(transitionPos("a", pos(thirdImage).x, pos(thirdImage).y + 0.5, pos(thirdImage).z, 1, setKey("moveKey", "b")));		
 			
-			face(thirdImage, newVector(ourPosition().x, ourPosition().y-0.5, ourPosition().z));
+			face(thirdImage, newVector(ourPosition().x, ourPosition().y, ourPosition().z));
 	}
 	
 	if(state === 3){ //
@@ -108,7 +108,7 @@ function executeState(){
 			.instruction(transitionColor("a", 1, 1, 1, 1, 1, setKey("colorKey", "a")));
 			//.instruction(transitionPos("a", pos(fourthImage).x, pos(fourthImage).y + 0.5, pos(fourthImage).z, 1, setKey("moveKey", "b")));	
 			
-			face(fourthImage, newVector(ourPosition().x, ourPosition().y-0.5, ourPosition().z));
+			face(fourthImage, newVector(ourPosition().x, ourPosition().y, ourPosition().z));
 	}
 	
 	if(state === 4){ //		
