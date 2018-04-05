@@ -29,7 +29,7 @@ var fifthImage = null;
 function executeState(){
 	if(state === 0){ //
 		firstImage = createItem("first");
-		
+		setCollider(firstImage, false);
 		moveInFront(firstImage, 1);
 		
 		wrap(firstImage)
@@ -50,7 +50,7 @@ function executeState(){
 	if(state === 1){ //
 		destroy(firstImage);
 		secondImage = createItem("second");
-		
+		setCollider(secondImage, false);
 		moveInFront(secondImage, 1);	
 		
 		wrap(secondImage)
@@ -71,7 +71,7 @@ function executeState(){
 	if(state === 2){ //
 		destroy(secondImage);
 		thirdImage = createItem("third");
-		
+		setCollider(thirdImage, false);
 		moveInFront(thirdImage, 1);
 		
 		wrap(thirdImage)
@@ -93,7 +93,7 @@ function executeState(){
 		destroy(thirdImage);
 		
 		fourthImage = createItem("fourth");
-		
+		setCollider(fourthImage, false);
 		moveInFront(fourthImage, 1);			
 		
 		wrap(fourthImage)
@@ -111,9 +111,9 @@ function executeState(){
 			face(fourthImage, newVector(ourPosition().x, ourPosition().y-0.5, ourPosition().z));
 	}
 	
-	if(state === 4){ //				
+	if(state === 4){ //		
 		fifthImage = createItem("fifth");
-		
+		setCollider(fifthImage, false);
 		moveInFront(fifthImage, 2.5);			
 		
 		wrap(fifthImage)
