@@ -1,4 +1,4 @@
-var state = 0;
+var state = -1;
 
 setup(){
 	
@@ -47,6 +47,7 @@ function executeState(){
 }
 
 function onClickEvent(obj){
-	executeState();
-	state++;
+		state++;
+		executeState();
+
 }
