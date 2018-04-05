@@ -113,7 +113,7 @@ function executeState(){
 	
 	if(state === 4){ //		
 		fifthImage = createItem("fifth");
-		setCollider(fifthImage, false);
+		//setCollider(fifthImage, false);
 		moveInFront(fifthImage, 2.5);			
 		
 		wrap(fifthImage)
