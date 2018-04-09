@@ -29,7 +29,7 @@ function start(){
 			.texture("https://i.imgur.com/kH7jfKt.png")
 			.tileTexture(10, 10)
 			.color(0, 0.3, 1, 0.9)
-			.emit(0, 1, 1, 1);	
+			.emit(1, 0, 0, 1);	
 	}
 	var obj = cube("Left");
 	
