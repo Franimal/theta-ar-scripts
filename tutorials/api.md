@@ -1,3 +1,22 @@
+***Wrapper functions***
+
+  These may be called on a wrapped object.  Wrap an object using wrap(object).
+  Call the functions like, for example, wrap(object).a().b().c().d();
+  
+  state(stateObject)
+  instructions(instructionArray)
+  instruction(instruction)
+  move(float x, float y, float z)
+  rotate(float x, float y, float z)
+  scale(float x, float y, float z)
+  emit(float r, float g, float b, float a)
+  color(float r, float g, float b, float a)
+  texture(texture)
+  tileTexture(float tileX, float tileY)
+  parent(parentObject)
+
+***API Functions***
+
 void showSpatialMesh(bool)
 void enableSpatialMesh(bool)
 bool isHololens()
