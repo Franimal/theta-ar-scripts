@@ -28,6 +28,22 @@
 
 ***API Functions***
 
+cube(name)
+
+sphere(name)
+
+cylinder(name)
+
+plane(name)
+
+clamp(num, min, max)
+
+bindRightTouchpad(object)
+
+bindLeftTouchpad(object)
+
+isString(obj)
+
 void showSpatialMesh(bool)
 
 void enableSpatialMesh(bool)
