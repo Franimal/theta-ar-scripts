@@ -38,6 +38,12 @@ plane(name)
 
 clamp(num, min, max)
 
+float random(low, high)
+
+destroy(object)
+
+floattime(); - current time
+
 bindRightTouchpad(object)
 
 bindLeftTouchpad(object)
