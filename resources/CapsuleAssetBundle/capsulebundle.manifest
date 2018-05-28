@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 461505565
+CRC: 1300527489
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 847477f8d974fb8e1bf43c4971058aed
+    Hash: fe2c8262d86634541612e1f6019fc506
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 6efd7e1cf566dd364f435eac90ced986
+    Hash: 8194c7f51c95fa30bf85eb231edb0edb
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -23,8 +23,16 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 109
+  Script: {instanceID: 0}
 - Class: 136
   Script: {instanceID: 0}
 Assets:
+- Assets/FastConfigurable/Shaders/FastConfigurable.cginc
+- Assets/FastConfigurable/Shaders/FastConfigurable2Sided.shader
 - Assets/Capsule.prefab
+- Assets/FastConfigurable/Shaders/FastConfigurable.shader
+- Assets/mat.mat
+- Assets/FastConfigurable/Shaders/macro.cginc
+- Assets/FastConfigurable/Shaders/HoloToolkitCommon.cginc
 Dependencies: []
